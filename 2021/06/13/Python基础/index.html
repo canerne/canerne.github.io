@@ -29,11 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 
@@ -91,6 +87,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             var windowWidth = $(window).width();
             if (windowWidth > 768 || windowWidth < 768) { 
                 document.write("<script type='text/javascript' src='/js/sakura.js'><\/script>");
+                document.write("<script type='text/javascript' src='/js/FunnyTitle.js'><\/script>")
                     // alert("进入了if判断大于 768了")
             }
         </script>
@@ -415,6 +412,19 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '02f01183008f3336c43237c4c39cecf0936021f136b84c00d50173c36f74ff41';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -560,12 +570,32 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-15
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    315
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -578,14 +608,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <div id="articleContent">
                 <p>python </p>
 <p>#写入文件</p>
-<pre><code>data = '我是一个靓仔'
+<pre><code>data = &#39;我是一个靓仔&#39;
 
-with open('我是一个文件.txt','w') as f:#这个f的意思就是起了个名字
+with open(&#39;我是一个文件.txt&#39;,&#39;w&#39;) as f:#这个f的意思就是起了个名字
       f.write(data)#逐行写入
       
-'为什么推荐用with写法？'
-'因为with 可以自动关闭文件'
-'防止手残,属于python的语法糖'
+&#39;为什么推荐用with写法？&#39;
+&#39;因为with 可以自动关闭文件&#39;
+&#39;防止手残,属于python的语法糖&#39;
 </code></pre>
 <p>#函数的传递 与调用</p>
 <pre><code>def liangzai(data):
@@ -593,36 +623,36 @@ with open('我是一个文件.txt','w') as f:#这个f的意思就是起了个名
 
 
 
-if __name__ == "__main__":#程序的入口 也就是主函数
-    data = '靓仔'
+if __name__ == &quot;__main__&quot;:#程序的入口 也就是主函数
+    data = &#39;靓仔&#39;
     liangzai(data)#传入data
 </code></pre>
 <p> #字典</p>
-<pre><code>data = {'一个':'靓仔','编程':'程序员'}
+<pre><code>data = {&#39;一个&#39;:&#39;靓仔&#39;,&#39;编程&#39;:&#39;程序员&#39;}
 
-print(data['一个'])
-print(data['编程'])
+print(data[&#39;一个&#39;])
+print(data[&#39;编程&#39;])
 </code></pre>
 <p>#字符串替换</p>
-<pre><code>data = '一个靓仔'
+<pre><code>data = &#39;一个靓仔&#39;
 
-new_data = '我是{}'.format(data)#注意 format只和{}替换
+new_data = &#39;我是{}&#39;.format(data)#注意 format只和{}替换
 
 print(new_data)
 
-'强烈推荐用.format写法'
-'特殊要求才用原始写法 % '
+&#39;强烈推荐用.format写法&#39;
+&#39;特殊要求才用原始写法 % &#39;
 
-data = '一个靓仔'
+data = &#39;一个靓仔&#39;
 
-new_data = '我是%s'%data
+new_data = &#39;我是%s&#39;%data
 
 print(new_data)
 </code></pre>
 <p>#新建文件夹</p>
 <pre><code>import os
 
-data = '我是一个靓仔'
+data = &#39;我是一个靓仔&#39;
 
 if not os.path.exists(data):#如果没有这个文件夹
       os.makedirs(data)#就创建
@@ -639,7 +669,7 @@ print(uuid4())
 <p>#文字解析</p>
 <pre><code>from urllib import parse#解析
 
-data = '我是一个靓仔'
+data = &#39;我是一个靓仔&#39;
 
 new_data = parse.quote(data)
 
@@ -1120,8 +1150,8 @@ print(new_data)
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '',
-        appKey: '',
+        appId: 'TXxhQPwQkqIomsXRS6oxfIhX-gzGzoHsz',
+        appKey: 'hElVoVq0tuUqo49aGN0S0e09',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1432,6 +1462,9 @@ print(new_data)
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">10.1k</span>
+            
             
             
                 
@@ -1521,6 +1554,12 @@ print(new_data)
     </a>
 
 
+
+
+
+    <a href="https://space.bilibili.com/249196235" class="tooltipped" target="_blank" data-tooltip="在B站上关注我: https://space.bilibili.com/249196235" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i> 
+    </a>
 
 
 
@@ -1714,6 +1753,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</body>
 
 </html>

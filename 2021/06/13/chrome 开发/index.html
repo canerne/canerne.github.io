@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="chrome 开发, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="keywords" content="Chrome 开发, HTML,CSS,JavaScript,JQuery,java,linux等">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>chrome 开发 | CanerBlog</title>
+    <title>Chrome 开发 | CanerBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,11 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 
@@ -91,6 +87,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             var windowWidth = $(window).width();
             if (windowWidth > 768 || windowWidth < 768) { 
                 document.write("<script type='text/javascript' src='/js/sakura.js'><\/script>");
+                document.write("<script type='text/javascript' src='/js/FunnyTitle.js'><\/script>")
                     // alert("进入了if判断大于 768了")
             }
         </script>
@@ -415,15 +412,28 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '02f01183008f3336c43237c4c39cecf0936021f136b84c00d50173c36f74ff41';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.webp')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">chrome 开发</h1>
+                    <h1 class="description center-align post-title">Chrome 开发</h1>
                 </div>
             </div>
         </div>
@@ -537,12 +547,25 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Typora-Markdown/">
+                                <span class="chip bg-color">-Typora -Markdown</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -556,12 +579,32 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-15
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    623
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -572,7 +615,88 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <pre><code>json
+/**
+    manifest.json
+*/
+// 必须的字段3个
+&quot;manifest_version&quot;  // manifest文件版本号。Chrome18开始必须为2
+&quot;name&quot; // 扩展名称
+&quot;version&quot;  // 版本。由1到4个整数构成。多个整数间用&quot;.&quot;隔开
+// 建议提供的字段3个
+&quot;description&quot;  // 描述。132个字符以内
+&quot;icons&quot;: {
+       &quot;16&quot;: &quot;image/icon-16.png&quot;,
+       &quot;48&quot;: &quot;image/icon-48.png&quot;,
+       &quot;128&quot;: &quot;image/icon-128.png&quot;
+    }, //扩展图标。推荐大小16，48，128
+&quot;default_locale&quot;: &quot;en&quot;, // 国际化
+// 以下字段多选一，或者都不提供
+ &quot;browser_action&quot;: {
+       &quot;default_icon&quot;: &quot;image/icon-128.png&quot;,
+        &quot;default_title&quot;: &quot;My Test&quot;,
+       &quot;default_popup&quot;: &quot;html/browser.html&quot;
+    }, //地址栏右侧图标管理。含图标及弹出页面的设置等
+&quot;page_action&quot;: {
+        &quot;default_icon&quot;: &quot;image/icon-48.png&quot;,
+        &quot;default_title&quot;: &quot;My Test&quot;,
+        &quot;default_popup&quot;: &quot;html/page.html&quot;
+    }, //地址栏最后附加图标。含图标及行为等
+ &quot;theme&quot;: {}, // 主题，用于更改整个浏览器的外观
+&quot;app&quot;: {}, // 指定扩展需要跳转到的URL
+// 根据需要提供
+ &quot;background&quot;: {
+       &quot;scripts&quot;: [
+           &quot;lib/jquery-3.3.1.min.js&quot;,
+           &quot;js/background.js&quot;
+       ] ,
+      &quot;page&quot;:&quot;html/background.html&quot;
+    }, // 指定扩展进程的background运行环境
+&quot;chrome_url_overrides&quot;: {
+       &quot;pageToOverride&quot;: &quot;html/overrides.html&quot;
+    }, //替换页面。详见注释1
+&quot;content_scripts&quot;: [{
+      &quot;matches&quot;: [&quot;https://www.baidu.com/*&quot;],
+      &quot;css&quot;: [&quot;css/mystyles.css&quot;],
+      &quot;js&quot;: [&quot;lib/jquery-3.3.1.min.js&quot;, &quot;js/content.js&quot;]
+    }], // 指定在web页面运行的脚本。详见注释2
+   &quot;content_security_policy&quot;: &quot;&quot;,  // 安全策略
+
+    &quot;file_browser_handlers&quot;: [],   
+
+    &quot;homepage_url&quot;: &quot;http://xxx&quot;, // 扩展的官方主页
+
+    &quot;incognito&quot;: &quot;spanning&quot;, // 或&quot;split&quot;。详见注释3
+
+    &quot;intents&quot;: {}, // 用户操作意图描述
+
+    &quot;key&quot;: &quot;&quot;, // 扩展唯一标识。不需要人为指定
+
+    &quot;minimum_chrome_version&quot;: &quot;1.0&quot;, // 扩展所需chrome的最小版本
+
+    &quot;nacl_modules&quot;: [],  // 消息与本地处理模块映射
+
+    &quot;offline_enabled&quot;: true, // 是否允许脱机运行
+
+    &quot;omnibox&quot;: {
+
+       &quot;keyword&quot;: &quot;myKey&quot;
+
+    }, //ominbox即地址栏。用于响应地址栏的输入事件
+ &quot;options_page&quot;: &quot;aFile.html&quot;, // 选项页。用于在扩展管理页面跳转到选项设置
+ &quot;permissions&quot;: [
+       &quot;https://www.baidu.com/*&quot;,
+       &quot;background&quot;,
+       &quot;tabs&quot;
+    ], //权限。详见注释4
+&quot;plugins&quot;: [{
+       &quot;path&quot;: &quot;extension_plugin.dll&quot;,
+       &quot;public&quot;: true
+    }], // 扩展。可调用第三方扩展
+    &quot;update_url&quot;: &quot;http://path/to/updateInfo.xml&quot;,   // 自动升级
+&quot;web_accessible_resources&quot;: [] // 指定资源路径，为String数组
+</code></pre>
+<h2 id="在Chrome开发测试"><a href="#在Chrome开发测试" class="headerlink" title="在Chrome开发测试"></a>在Chrome开发测试</h2>
                 
             </div>
             <hr/>
@@ -635,7 +759,11 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Typora-Markdown/">
+                                    <span class="chip bg-color">-Typora -Markdown</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1043,8 +1171,8 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '',
-        appKey: '',
+        appId: 'TXxhQPwQkqIomsXRS6oxfIhX-gzGzoHsz',
+        appKey: 'hElVoVq0tuUqo49aGN0S0e09',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1096,8 +1224,12 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            caner
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Git%E6%8C%87%E4%BB%A4/" class="post-category">
+                                    Git指令
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1128,15 +1260,15 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.webp" class="responsive-img" alt="文章测试2">
+                        <img src="/medias/featureimages/1.webp" class="responsive-img" alt="typora-vue-theme主题介绍">
                         
-                        <span class="card-title">文章测试2</span>
+                        <span class="card-title">typora-vue-theme主题介绍</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            这是文章测试的第二篇
                         
                     </div>
                     <div class="publish-info">
@@ -1145,11 +1277,27 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            caner
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1351,6 +1499,9 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">10.1k</span>
+            
             
             
                 
@@ -1440,6 +1591,12 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
     </a>
 
 
+
+
+
+    <a href="https://space.bilibili.com/249196235" class="tooltipped" target="_blank" data-tooltip="在B站上关注我: https://space.bilibili.com/249196235" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i> 
+    </a>
 
 
 
@@ -1633,6 +1790,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</body>
 
 </html>

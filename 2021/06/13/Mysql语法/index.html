@@ -29,11 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 
@@ -91,6 +87,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             var windowWidth = $(window).width();
             if (windowWidth > 768 || windowWidth < 768) { 
                 document.write("<script type='text/javascript' src='/js/sakura.js'><\/script>");
+                document.write("<script type='text/javascript' src='/js/FunnyTitle.js'><\/script>")
                     // alert("进入了if判断大于 768了")
             }
         </script>
@@ -415,6 +412,19 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '02f01183008f3336c43237c4c39cecf0936021f136b84c00d50173c36f74ff41';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -560,12 +570,32 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-15
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    688
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    3 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -578,85 +608,85 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <div id="articleContent">
                 <p>MySQL：</p>
 <p>[^小伟丫]: </p>
-<pre class=" language-mysql"><code class="language-mysql">\c #放弃 当前执行代码
+<pre><code class="mysql">\c #放弃 当前执行代码
 </code></pre>
 <p>建数据库（指定字符集）</p>
-<pre class=" language-mysql"><code class="language-mysql">create database shop(数据库名) charset utf8;
+<pre><code class="mysql">create database shop(数据库名) charset utf8;
 </code></pre>
 <p>进入数据库</p>
-<pre class=" language-mysql"><code class="language-mysql">show database; # 显示所有数据库
+<pre><code class="mysql">show database; # 显示所有数据库
 drop database shop; #删除指定数据库
 //增加条件删除(减少报错)
 drop database if exists shop; # 如果存在就删除
 </code></pre>
 <p>查看数据库结构</p>
-<pre class=" language-mysql"><code class="language-mysql">show create database shop; # 查看数据库结构
+<pre><code class="mysql">show create database shop; # 查看数据库结构
 desc 表名;# 查看表结构
 </code></pre>
 <p>建表</p>
-<pre class=" language-mysql"><code class="language-mysql">create table 表名(id int PRIMARY KEY AUTO_INCREMNT,cname varchar(30),description varchar(100)) charset utf8; #指定表编码（如果不指定默认继承数据库编码）
+<pre><code class="mysql">create table 表名(id int PRIMARY KEY AUTO_INCREMNT,cname varchar(30),description varchar(100)) charset utf8; #指定表编码（如果不指定默认继承数据库编码）
 desc 表名;# 查看结构 （SQLyog）
 drop table if EXISTS 表名;
 </code></pre>
 <p>建表尝试</p>
-<pre class=" language-mysql"><code class="language-mysql">CREATE TABLE 'tb_student'(
-'sid' INT(4) ZEROFILL);
-CREATE TABLE 'tb_student'(
-'sid' INT(4) ZEROFILL);
+<pre><code class="mysql">CREATE TABLE &#39;tb_student&#39;(
+&#39;sid&#39; INT(4) ZEROFILL);
+CREATE TABLE &#39;tb_student&#39;(
+&#39;sid&#39; INT(4) ZEROFILL);
 </code></pre>
 <p>插入数据</p>
-<pre class=" language-mysql"><code class="language-mysql">insert into 表名 value(数据1),(数据2);# 仅限于单列 时可添加多条数据;
+<pre><code class="mysql">insert into 表名 value(数据1),(数据2);# 仅限于单列 时可添加多条数据;
 insert into 表名(字段名列表) values(值列表1),(值列表2);#添加多条;
 /*以上句式在MySQL中不支持*/
 create table 新表(select 字段1,字段2,...from 原表);
 </code></pre>
 <p>查看表</p>
-<pre class=" language-mysql"><code class="language-mysql">select * from 表名;# 查看某个表数据
+<pre><code class="mysql">select * from 表名;# 查看某个表数据
 show create table 表名; #查看表注释
 </code></pre>
 <p>出现乱码情况</p>
-<pre class=" language-mysql"><code class="language-mysql">set character_set_client=gbk; #设置编码
+<pre><code class="mysql">set character_set_client=gbk; #设置编码
 set character_set_results=gbk; #设置乱码
 set names gbk; 
 </code></pre>
 <p>修改表</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table `旧表` rename `新表`; # 修改表名
+<pre><code class="mysql">alter table `旧表` rename `新表`; # 修改表名
 </code></pre>
 <p>添加字段</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table 表名 add 字段名 类型; # 添加字段
+<pre><code class="mysql">alter table 表名 add 字段名 类型; # 添加字段
 </code></pre>
 <p>修改字段</p>
-<pre class=" language-mysql"><code class="language-mysql">/*修改字段名*/
+<pre><code class="mysql">/*修改字段名*/
 alter table 表名 change 修改字段 修改后字段 char(10) 属性; # 修改字段
 </code></pre>
 <p>删除字段</p>
-<pre class=" language-mysql"><code class="language-mysql">/*删除字段*/
+<pre><code class="mysql">/*删除字段*/
 alter table 表名 drop 字段名; # 删除字段
 </code></pre>
 <p>添加主键约束</p>
-<pre class=" language-mysql"><code class="language-mysql">alter table 表名 add constraint 主键名 primary key 表名(主键字段); 
+<pre><code class="mysql">alter table 表名 add constraint 主键名 primary key 表名(主键字段); 
 </code></pre>
 <p>添加外键约束</p>
-<pre class=" language-mysql"><code class="language-mysql">ALTER TABLE pet外键表 ADD CONSTRAINT fk_typeId外键名 FOREIGN KEY (typeId)外键id
+<pre><code class="mysql">ALTER TABLE pet外键表 ADD CONSTRAINT fk_typeId外键名 FOREIGN KEY (typeId)外键id
 REFERENCES pettype主键表(id)主键id
 </code></pre>
 <p>将查询结果插入到新表</p>
-<pre class=" language-mysql"><code class="language-mysql">insert into 新表(字段1,字段2,....)
+<pre><code class="mysql">insert into 新表(字段1,字段2,....)
 select 字段1,字段2,....
 from 原表;
 </code></pre>
 <p>更新数据记录</p>
-<pre class=" language-mysql"><code class="language-mysql">update 表名 set 字段1=值,字段2=值,...,where 条件;
+<pre><code class="mysql">update 表名 set 字段1=值,字段2=值,...,where 条件;
 delete from 表名 where 条件(字段=值);
 </code></pre>
 <p>高级查询</p>
-<pre class=" language-mysql"><code class="language-mysql">select 字段1,字段2,字段3 
+<pre><code class="mysql">select 字段1,字段2,字段3 
 from 表名
 where 条件(字段=值)
 order by 字段(学号);# 升序
 </code></pre>
 <p>添加外键事例：</p>
-<pre class=" language-mysql"><code class="language-mysql">#pet 主人id 外键
+<pre><code class="mysql">#pet 主人id 外键
 ALTER TABLE `pet` ADD CONSTRAINT `fk_owner_id` FOREIGN KEY (`owner_id`) REFERENCES `petwner` (`id`);
 #pet 商店id 外键
 ALTER TABLE `pet` ADD CONSTRAINT `fk_store_id` FOREIGN KEY (`store_id`) REFERENCES `petstore`(id);
@@ -668,15 +698,15 @@ ALTER TABLE `account` ADD CONSTRAINT `fk_seller_id` FOREIGN KEY (`seller_id`) RE
 ALTER TABLE `account` ADD CONSTRAINT `fk_buyer_id` FOREIGN KEY (`buyer_id`) REFERENCES `petwner`(id);
 </code></pre>
 <p>查看表结构：</p>
-<pre class=" language-mysql"><code class="language-mysql">SHOW CREATE TABLE account(表名);
+<pre><code class="mysql">SHOW CREATE TABLE account(表名);
 </code></pre>
 <p>特殊类型:</p>
-<pre class=" language-mysql"><code class="language-mysql">TIMESTAMP #时间
+<pre><code class="mysql">TIMESTAMP #时间
 decimal #money
 </code></pre>
 <p>创建本地用户 指定 库：</p>
-<pre class=" language-mysql"><code class="language-mysql">/*创建本地用户epet,密码0000*/
-GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY '0000'
+<pre><code class="mysql">/*创建本地用户epet,密码0000*/
+GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY &#39;0000&#39;
 </code></pre>
 
                 
@@ -1153,8 +1183,8 @@ GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY '0000'
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '',
-        appKey: '',
+        appId: 'TXxhQPwQkqIomsXRS6oxfIhX-gzGzoHsz',
+        appKey: 'hElVoVq0tuUqo49aGN0S0e09',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1465,6 +1495,9 @@ GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY '0000'
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">10.1k</span>
+            
             
             
                 
@@ -1554,6 +1587,12 @@ GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY '0000'
     </a>
 
 
+
+
+
+    <a href="https://space.bilibili.com/249196235" class="tooltipped" target="_blank" data-tooltip="在B站上关注我: https://space.bilibili.com/249196235" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i> 
+    </a>
 
 
 
@@ -1747,6 +1786,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</body>
 
 </html>

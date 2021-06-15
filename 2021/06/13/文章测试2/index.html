@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="文章测试2, HTML,CSS,JavaScript,JQuery,java,linux等">
+    <meta name="keywords" content="typora-vue-theme主题介绍, HTML,CSS,JavaScript,JQuery,java,linux等">
     <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>文章测试2 | CanerBlog</title>
+    <title>typora-vue-theme主题介绍 | CanerBlog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,11 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 
@@ -91,6 +87,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             var windowWidth = $(window).width();
             if (windowWidth > 768 || windowWidth < 768) { 
                 document.write("<script type='text/javascript' src='/js/sakura.js'><\/script>");
+                document.write("<script type='text/javascript' src='/js/FunnyTitle.js'><\/script>")
                     // alert("进入了if判断大于 768了")
             }
         </script>
@@ -415,15 +412,28 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.webp')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">文章测试2</h1>
+                    <h1 class="description center-align post-title">typora-vue-theme主题介绍</h1>
                 </div>
             </div>
         </div>
@@ -537,12 +547,29 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -556,12 +583,32 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-15
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -572,7 +619,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="这是文章测试"><a href="#这是文章测试" class="headerlink" title="这是文章测试"></a>这是文章测试</h1>
                 
             </div>
             <hr/>
@@ -635,7 +682,15 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1043,8 +1098,8 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '',
-        appKey: '',
+        appId: 'TXxhQPwQkqIomsXRS6oxfIhX-gzGzoHsz',
+        appKey: 'hElVoVq0tuUqo49aGN0S0e09',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1079,15 +1134,15 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.webp" class="responsive-img" alt="chrome 开发">
+                        <img src="/medias/featureimages/23.webp" class="responsive-img" alt="Chrome 开发">
                         
-                        <span class="card-title">chrome 开发</span>
+                        <span class="card-title">Chrome 开发</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Chrome 开发
                         
                     </div>
                     <div class="publish-info">
@@ -1096,11 +1151,23 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            caner
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora-Markdown/">
+                        <span class="chip bg-color">-Typora -Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1124,7 +1191,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            这是文章测试
                         
                     </div>
                     <div class="publish-info">
@@ -1133,11 +1200,23 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            caner
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora-Markdown/">
+                        <span class="chip bg-color">-Typora -Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1339,6 +1418,9 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">10.1k</span>
+            
             
             
                 
@@ -1428,6 +1510,12 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
     </a>
 
 
+
+
+
+    <a href="https://space.bilibili.com/249196235" class="tooltipped" target="_blank" data-tooltip="在B站上关注我: https://space.bilibili.com/249196235" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i> 
+    </a>
 
 
 
@@ -1621,6 +1709,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</body>
 
 </html>

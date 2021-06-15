@@ -29,11 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 
 
@@ -91,6 +87,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             var windowWidth = $(window).width();
             if (windowWidth > 768 || windowWidth < 768) { 
                 document.write("<script type='text/javascript' src='/js/sakura.js'><\/script>");
+                document.write("<script type='text/javascript' src='/js/FunnyTitle.js'><\/script>")
                     // alert("进入了if判断大于 768了")
             }
         </script>
@@ -415,6 +412,19 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '02f01183008f3336c43237c4c39cecf0936021f136b84c00d50173c36f74ff41';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -560,12 +570,32 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-15
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    693
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -595,10 +625,10 @@ show databases //显示数据库
 use myschool;//选择数据库
 drop database myschool;//删除数据库
 </code></pre>
-<h5 id="数据库提示语句"><a href="#数据库提示语句" class="headerlink" title="数据库提示语句"></a>数据库提示语句</h5><pre class=" language-mysql"><code class="language-mysql">Qyery OK ：SQL语句执行成功
+<h5 id="数据库提示语句"><a href="#数据库提示语句" class="headerlink" title="数据库提示语句"></a>数据库提示语句</h5><pre><code class="mysql">Qyery OK ：SQL语句执行成功
 1 row affected ：操作影响的行数
 0.012sec ：操作执行时间
-Unknown database 'mybase'：数据库不存在
+Unknown database &#39;mybase&#39;：数据库不存在
 Database changed : 选择数据库成功
 </code></pre>
 <h5 id="数据库工具"><a href="#数据库工具" class="headerlink" title="数据库工具"></a>数据库工具</h5><pre><code>SQLyog-图形化的MySQL管理工具
@@ -624,7 +654,7 @@ Database changed : 选择数据库成功
 </tr>
 </tbody></table>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518113757897.png" alt="image-20200518113757897"></p>
-<h5 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h5><pre class=" language-mysql"><code class="language-mysql">ZEROFILL # 自补充 限制输入负数 补位 约束 数值只能为正数
+<h5 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h5><pre><code class="mysql">ZEROFILL # 自补充 限制输入负数 补位 约束 数值只能为正数
 unsigned # 标识 无符号 不能为负数
 PRIMARY KEY # 设置 为 主键
 AUTO_INCREMENT # 自增加一
@@ -634,7 +664,7 @@ EXISTS # 存在
 constraint # 主键
 references # 外键
 </code></pre>
-<h5 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h5><pre class=" language-mysql"><code class="language-mysql">#查询
+<h5 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h5><pre><code class="mysql">#查询
 #limit 参数1(int) 取前几条
 SELECT studentName,phone,address FROM student
 ORDER BY studentNo DESC
@@ -647,16 +677,16 @@ asc 升序
 desc 降序
 /*聚合函数*/
 # concat 字符串拼接
-SELECT CONCAT('My','S','QL')
+SELECT CONCAT(&#39;My&#39;,&#39;S&#39;,&#39;QL&#39;)
 # insert 替换字符串(参数1，参数2，参数3,参数4)(原字符串,从第几位开始,替换个数,替换对象(新字符串))
-SELECT INSERT('这是SqL Server数据库',3,10,'MySql')
+SELECT INSERT(&#39;这是SqL Server数据库&#39;,3,10,&#39;MySql&#39;)
 # 转大写
-SELECT LOWER('ABC')
+SELECT LOWER(&#39;ABC&#39;)
 # 转小写
-SELECT UPPER('abc')
+SELECT UPPER(&#39;abc&#39;)
 # substring 截取(参数1,参数2,参数3)(原字符串,开始下标,开始下标后的多少位)
-SELECT SUBSTRING('JavaMySQLOracle',5,5)
-SELECT SUBSTRING('asdasd',3)
+SELECT SUBSTRING(&#39;JavaMySQLOracle&#39;,5,5)
+SELECT SUBSTRING(&#39;asdasd&#39;,3)
 # ----时间日期函数-----
 # curDate 获取当前时间 (年月日)
 SELECT CURDATE()
@@ -665,7 +695,7 @@ SELECT CURTIME()
 # now 获取当前时间 年月日 时分秒
 SELECT NOW()
 # week(date) date参数是时间格式 获取一年中的第几周
-SELECT WEEK('2020-1-17')+1
+SELECT WEEK(&#39;2020-1-17&#39;)+1
 # 获取年 月 日 时 分 秒
 SELECT YEAR(NOW()) # 年
 SELECT MONTH(NOW()) # 月
@@ -674,7 +704,7 @@ SELECT HOUR(NOW()) # 时
 SELECT MINUTE(NOW()) # 分
 SELECT SECOND(NOW()) # 秒
 # DATEDIFF 求天数差 (参数1,参数2)
-SELECT DATEDIFF(NOW(),'2008-01-1')
+SELECT DATEDIFF(NOW(),&#39;2008-01-1&#39;)
 # ADDDDATE (参数1,参数2) 参数1 基础时间 参数2 添加天数
 SELECT ADDDATE(NOW(),30)
 # CEIL 向上取整 (返回大于或者等于自己的整数)
@@ -1160,8 +1190,8 @@ truncate # 重置自增
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '',
-        appKey: '',
+        appId: 'TXxhQPwQkqIomsXRS6oxfIhX-gzGzoHsz',
+        appKey: 'hElVoVq0tuUqo49aGN0S0e09',
         notify: 'true' === 'true',
         verify: 'true' === 'true',
         visitor: 'true' === 'true',
@@ -1472,6 +1502,9 @@ truncate # 重置自增
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">10.1k</span>
+            
             
             
                 
@@ -1561,6 +1594,12 @@ truncate # 重置自增
     </a>
 
 
+
+
+
+    <a href="https://space.bilibili.com/249196235" class="tooltipped" target="_blank" data-tooltip="在B站上关注我: https://space.bilibili.com/249196235" data-position="top" data-delay="50">
+        <i class="fas fa-play-circle"></i> 
+    </a>
 
 
 
@@ -1754,6 +1793,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</body>
 
 </html>
