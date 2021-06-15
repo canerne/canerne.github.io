@@ -11,4 +11,4 @@ document.addEventListener('visibilitychange', function () {
         titleTime = setTimeout(
             function () { 
                 document.title = OriginTitle; 
-            }, 2000); } });
+            }, 4000); } });
