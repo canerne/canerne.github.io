@@ -592,14 +592,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    623
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -619,88 +619,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>json
-/**
-    manifest.json
-*/
-// 必须的字段3个
-&quot;manifest_version&quot;  // manifest文件版本号。Chrome18开始必须为2
-&quot;name&quot; // 扩展名称
-&quot;version&quot;  // 版本。由1到4个整数构成。多个整数间用&quot;.&quot;隔开
-// 建议提供的字段3个
-&quot;description&quot;  // 描述。132个字符以内
-&quot;icons&quot;: {
-       &quot;16&quot;: &quot;image/icon-16.png&quot;,
-       &quot;48&quot;: &quot;image/icon-48.png&quot;,
-       &quot;128&quot;: &quot;image/icon-128.png&quot;
-    }, //扩展图标。推荐大小16，48，128
-&quot;default_locale&quot;: &quot;en&quot;, // 国际化
-// 以下字段多选一，或者都不提供
- &quot;browser_action&quot;: {
-       &quot;default_icon&quot;: &quot;image/icon-128.png&quot;,
-        &quot;default_title&quot;: &quot;My Test&quot;,
-       &quot;default_popup&quot;: &quot;html/browser.html&quot;
-    }, //地址栏右侧图标管理。含图标及弹出页面的设置等
-&quot;page_action&quot;: {
-        &quot;default_icon&quot;: &quot;image/icon-48.png&quot;,
-        &quot;default_title&quot;: &quot;My Test&quot;,
-        &quot;default_popup&quot;: &quot;html/page.html&quot;
-    }, //地址栏最后附加图标。含图标及行为等
- &quot;theme&quot;: {}, // 主题，用于更改整个浏览器的外观
-&quot;app&quot;: {}, // 指定扩展需要跳转到的URL
-// 根据需要提供
- &quot;background&quot;: {
-       &quot;scripts&quot;: [
-           &quot;lib/jquery-3.3.1.min.js&quot;,
-           &quot;js/background.js&quot;
-       ] ,
-      &quot;page&quot;:&quot;html/background.html&quot;
-    }, // 指定扩展进程的background运行环境
-&quot;chrome_url_overrides&quot;: {
-       &quot;pageToOverride&quot;: &quot;html/overrides.html&quot;
-    }, //替换页面。详见注释1
-&quot;content_scripts&quot;: [{
-      &quot;matches&quot;: [&quot;https://www.baidu.com/*&quot;],
-      &quot;css&quot;: [&quot;css/mystyles.css&quot;],
-      &quot;js&quot;: [&quot;lib/jquery-3.3.1.min.js&quot;, &quot;js/content.js&quot;]
-    }], // 指定在web页面运行的脚本。详见注释2
-   &quot;content_security_policy&quot;: &quot;&quot;,  // 安全策略
-
-    &quot;file_browser_handlers&quot;: [],   
-
-    &quot;homepage_url&quot;: &quot;http://xxx&quot;, // 扩展的官方主页
-
-    &quot;incognito&quot;: &quot;spanning&quot;, // 或&quot;split&quot;。详见注释3
-
-    &quot;intents&quot;: {}, // 用户操作意图描述
-
-    &quot;key&quot;: &quot;&quot;, // 扩展唯一标识。不需要人为指定
-
-    &quot;minimum_chrome_version&quot;: &quot;1.0&quot;, // 扩展所需chrome的最小版本
-
-    &quot;nacl_modules&quot;: [],  // 消息与本地处理模块映射
-
-    &quot;offline_enabled&quot;: true, // 是否允许脱机运行
-
-    &quot;omnibox&quot;: {
-
-       &quot;keyword&quot;: &quot;myKey&quot;
-
-    }, //ominbox即地址栏。用于响应地址栏的输入事件
- &quot;options_page&quot;: &quot;aFile.html&quot;, // 选项页。用于在扩展管理页面跳转到选项设置
- &quot;permissions&quot;: [
-       &quot;https://www.baidu.com/*&quot;,
-       &quot;background&quot;,
-       &quot;tabs&quot;
-    ], //权限。详见注释4
-&quot;plugins&quot;: [{
-       &quot;path&quot;: &quot;extension_plugin.dll&quot;,
-       &quot;public&quot;: true
-    }], // 扩展。可调用第三方扩展
-    &quot;update_url&quot;: &quot;http://path/to/updateInfo.xml&quot;,   // 自动升级
-&quot;web_accessible_resources&quot;: [] // 指定资源路径，为String数组
-</code></pre>
-<h2 id="在Chrome开发测试"><a href="#在Chrome开发测试" class="headerlink" title="在Chrome开发测试"></a>在Chrome开发测试</h2>
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0a8945cea2c46de723fbe9ba1047c99795f1ba4451e449251b2dddff1f8d889d">96f64bfa65c8b3728aebb0bdd2a2b4ee7265d946a25b56698c609af90c6618b9ca2807604b0f9dfd0a0e48ffe8fb8e196af89bf6a2bef49592c2851939e39781fd8b5a5c3341ebfde94b9aea939f51cd510270c984211c534e8b63337ae81df56f932aeb393f79c3c9adfd8bd5dc600d2f0afaa218cd56c87bbef5579d33e0f67a8b8df84c0b8ba5ab0c0597ff9029f3a04e1b61ebd4efd5bdae784499d3b1652002e3f30d3c170bd9eb2143d7a3ff90c86b01404b5a565489cd22059b4c24786c26afed603157668f6a09264935a6b65ed333ac4335c53a9ea4cb13ab8a335ccd4c6f0e3858d2bab14d315fbc0a20a8ac8de5e1160a38220da3cde655e8bd4b371af8122decf708aeb567672b2f887791b642a104e10835c06e35d83f889785b8159ea1e7c1d5e539b78341932cf5dd2eddecd2f104efceabad875cb3784511e34caa653cefa6ff5495564360d95e81cc9aa3eda931817a43cfc18eb375416603d14f0773b912c99af27030c2fe6838fc7db05bbba872578aa36e10b90acb5a53632c5259dfa1ad06360978fae313a08b484b54cd256170e33a537439ec1d9056d626e86e35df2964ce4a2abaa574a05e087e8e115485300ad14bca816ed152778f6f1e5fe108db2b3bd723facc094c0111c7a52d7c29e65468dd0923abd31875cef490feeb1677e46dd7c07cd4e72729ecfbbbfe57b0eb6e92c29566ee78085796a899c2b9de2fb3720e141f2a27be1f60d3e57d2224f0f129d07b64d20db28365f843a83fca826045148890fb8e4ae0c8c73e51d4836b3ed3f88d6c9361ef16a2530375b872a5cc39807ee3ce9c8a72faea609fedcd51a564271126c050029eb334bda37f9309b3a32af6fcd9ba210a4e14ee0bd018308e061310046c739406cc76cf813f9ab1b44151df6d8e7306ea7630a3cf24b0446b95ab2b891810103630747219a67c375ce8238ceb421e1c2640c357cde156327e5743b84b16f524f7e199265f4aa76b4c2d6faf8fe9a6b75856d6fb6e39a1e9b1f75c14b04d726e387752263edb5346441e5cef0f3a69c45ea5e45097db503be3c793278016fbfc45c31d7885ee40603efcca777d3fc4a87f93f6d1c25d6b7a0b97ae874dcdee1cf76ab60a800175ddb9c9c6b6ccd73db23e4699fb96b0a4cbd3920fa44baf395f1d8eb0b0e3ebd3f51a888886e0eeaa8fc5347d4c51e82e39de864fedd6081306ddc6f44cc0a72f875d636592b9ff977fef2bac6bfa4fd6d10900a7c241116efc88434df2d81b2b68c3faea23b448e83776458b8674f2e8d3266c7b08210e534b60c15b4c332f6466a9a55637fefd94ba69a35f1d769f5bc3f5df36544792202beaab40eff9bdc2d39cb637819f5e5cabbebce0e6ac58d69a0a66e086526c8770b1cd5849c78d2c026e511575f39c3a5247d282667458ab3fb57da74606f68253efb2628487f31aec6772e61db1457c9b365a421212f247a7134597ba8229dbfb3a3b3ad154491dcb99acd3e1eed997b9859ba7d404abd3223f84cebd0092397bba10314e8d78fdc2c8dfdd4973056b2403df596aa86d4c65a82a48e27ff667a1ee982e335071e4dfd9fd8342201bca6bf9e00da525dd325f38b8ddda9212eb4096033a6bd20aa52d47fe90a3aa9f0f3c09f8bf601556e823cc9443482b874d5aa5aa13a54edd936ba8b99a03e36cdd18ebd1a45e1cddd13fb6483bddc398c6266483c8661181dc0ca6beb056245724ff695dacd0e043972df911cf125f5c7251dc109ee59c6885b9df33b7a019e527dc5d9c52335b7fac1634d82eedd1b42a3b126c11c962ac645da8bd62424bd8b61a6702f6bd77e56ce9db71c82c11843626264f52553b5a1b1f91fb71e3081aebfa994bb356cd5b2aaea7514d11c9f181214419106644c4cd798ba1884748ff5961e253c12cb64ed5acba9570aff4c295a531865f3cbdd0c9210d7f8d81ada736bade3a4bfd7757d4136614fde0bf659e1c3a57150378eb53e29a04c3d1a7eb7e29cc37761dcca3aef2a83919799a9bc184d0dc951bbfa570390d4d557da632734ff43bfd37510138712109c2e974db48f4fac105e35cc4fa18d06b7d3da7d2cd7f4097e6e0d4f34b91e4929e47e90751494135b78048e1f502bf6496c9bbf596f98c2936ab35ea63765a669b525ebf82c543e1911d222d2ceafa0de097b4bcca3a812642ba4c199d51930a1891bda02cf5b82a9c5e061c54eb28a67a8bc333db4398ba11b0330b7e0e8978baf7c3847e147a569d773df744643852e6aaba0cc6339d83e8436ce3e67a941aac55000b2a181ad234d8b3e859c18ea897d8c7e5aeec6177dca02d3dbd45129a872663fcf3193051b4295fd9d0eee50e3804646414e2eaeba5d3726e951f04079f8e7516cfec3eac97ee9e7949c2aa06b636dec76c746b7caad6c915251ceefd1de671a4939af0fcafbf7aaac93d84dc8b1e92f0166abcc9b58479c2b58536cb4934b66e99ad7437de2ebb637c168ceff81952cc0cb3714d4e62e18599e3949a36afcf39319a9c03d15d3297efad76a7f3a1585fe66b55be00474eafd095b51f45a912a75916876929e5d39896894afe46f653dc6d2fc39402aad2969b4ff97e70c478edd3fc6f576cf4e120dd97c6da6acb9398a75a0004e0e3b141f9c753472913b3c01d19711c608d596e3e427691f6034cef67a3dfe01bc7ffb4eb5b28ebd7f28c3de7069c2c0843df9a24d7492a95496ca8c6192d21adf508a1a2034461836cc2b3bfb425ff51a7a7a7559d090cc807bb00e9c96ab79503cfafed2c485c1337bbeff84ed8c583e4595928321c390247681576b8e7725a4ace30b8207e48e57383aab448c88bd08750cc5ad969c67939abb2c727db03348ecf66e542de42d4eb9ddd8d1e74951597a10897e66844663970502e835895a0b8f5e41207cd01e40383303da4097e16fd933cb889349174d2fc4a9dcb5da8464cc01e38aee740767a3cdfc98ae40dc94a4a050c5bd06f417f23ada0cc69c70c68105b5a7874ce0afb1519e35f72961d03b74bd96b7389c60471d6134ea11af2c04e66d886f68fdebea44785e4d7d198fa7ea1abbc24951d9015db73cb2125f490a9a28c97fcfc1634cfc40fd7fa88242f19887df9abb4bbf86b4eea6156953efd64722e201c6c6d1fdc99ad9c1595cc3511feba2aa8acf1e453ba92753827457a8f14ef08d279669912431bd6225a3827e89f48943ba49d84abc843bc8ca65304ceabf08366a69aaf789df782281e57b564b9f77d4376eb8b9aabc8a96db72d5a126df1b09118944cfe2dc6929976603bd5a82894f5acc54282dd9f972b003cb8189c0cd8b0461e16b19ffdc139de1b7d2208ae86d6a0d6a586fc4cfc1598abb36b312b7e2cbfe01c8203fa5b2a9a6d9c769c01bf593b05c180268d56e3c36c3211e0355d6846c9ca97f65fca5841e30868444ca69ddc54cab66037a6674906cccb1589fbf9f80e3f988d3476570db6831430b691c6a0610b6f34d4e49b504085c96605d409741776089c93727ba54b2e4b4ef4c52c9e309d6ae249472cff80a6e430d69b1f3a2492eebaf07cd5715cb007a3084dc02ae8e2ee729edcf605f5406da2831eef6cd0e280ad8c87a4cc5e286f8c05d56b732c7ca8d58996740bc017f4a9e50501a9eb820950615737b5641a12a083b9e97ba2c5c11da209a290eac37c4d926d4838ace89850fe6720649f95a5228d29748e8b8405fe08de3c03104a3c6ff3719bfb0323a7c6e8c219aa3587e02966620ff5a7732bd80171fc0ffe49a6f6363951b6916629906a9e01105ce3c0290c127cb57a51895e6a1f41bfec4335073cb798c7e021a0273908771671f58d19eaafcd6e02f6d5d158556add5b98eb33a1baa52845ab2f12e144aa958f9ee917d92e318d6c9d0bcbfd51c065e5e0bf26aa5fe1bc4eec878001d72626ef7010832c3b116589012e308ca77926af165ce36eb38b1d9bd07590d4d4c20ce5adefcf3def031a3209eaf4ac78f9df05cc84be6c6e1723e979f1b5c3c4ce6d83b38eebfb504fa3db66d608598d8709815c8fea0d26cac80d32c8d327e517afefa683226f7f6445541a06ae94096705bfb3f0c66d381195c0e673b8baf5663f28b58ab3d49667e98f5029b37f86d993366a9fa6316f669b22b05c8f6fb5236cffd68208640e9eb8f53203dc980e3bfbbbf0bb2d55571d101171531afd0e7d8ae38e0857a96e457bdfc0aa9b63767703985e1eaadb9e09347eb58cf9b46360f2c6c7d9efbcf58d123fcd0382fe369e8fd9a969ea99fb5e4f4936bf03ead7d993d803eb0152a532803dd701783f7a7d987c839cbbfb6f700b1e53ca2c12530eece7fa1adbd32ae9dc9d245d60ac5d40a1088b74f94bece68f7a0ef7c7313e284876e17014ef299a3d40087f886d40276d83ec1f08a9dd8d5ac5ebaf40bfa3b03aad3147bd165bc64b7e28b73d8b5774a650b82fdda18ce5f8bcfa5d01a5f8d65b18fa7a889ae403214c021a584fb12e52fa3fb6a46f20fdf5e0fdfa57de011c8eaccc003396d8a762e409aba45445c86f27cd7d58384d8d480502a2bbd1e71542e68d851cd0c08d7bbbbb225afb567a15b2b7cca88d7dd85f4f254d449e0ae069c88cea7d63c30ecd3bb00b0f127415cd7be55de020ff5c0f677c66dc3586e07811b9c5693aec5f4d936e7b34e1b7a3d6f85022d5cbdfe6d243ed72fd97ba4d1d68cd60738c51468c6d1dd9ce96a91068ccaf6d7986683f47a1dc8a44a5c1c00d3fdf7e43bd3345b9523bf76b06aba5d26518bd93ccaadf0c9792cb801f989434bbfb85938f673b3dc6ac76d2e313ebd1266135c2f97e75b41d2e357a042c9a53e063ffcb33048fa0dbd2d411b8293d7a15d18e43051a0ef37fe9432778afc6a827e5c935722eef4e13b1a13ac9881887f3336c712d227ebcb795b0e251f04ad233cad19970e5f9c0683336deb1bd6565c5d10a015a9d1fe80cad9ec6878b42608c459fa985fcd0c16e5d61c88c4e7df3e366a8239991eeb486eed2d6a2ae46f6a2fca1f00390a620edc0034710090d69480f643dbde930c6bb3c7533ee754b1f7474872cab76d020c874ca49d9cbe2be4d9ee0eb27891639ba4dfa4ad43a49c36ee7cbc9de36acd89a122ddf6a2c4512d9a448e7de928f14bac40812d9504c402c508d7180decf11ee7d67aa713b273ea66af8836afa10c0051acc167b95fe2842385c70227ba2422ed4a7de078b3e248f3d1ba83ab91144de38d68be445b2f8c9b657b6b24d609801013d0c7a1e</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1500,7 +1430,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             

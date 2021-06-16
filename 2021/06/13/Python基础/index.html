@@ -583,7 +583,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    315
+                    6
                 </div>
                 
 
@@ -610,76 +610,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>python </p>
-<p>#写入文件</p>
-<pre><code>data = &#39;我是一个靓仔&#39;
-
-with open(&#39;我是一个文件.txt&#39;,&#39;w&#39;) as f:#这个f的意思就是起了个名字
-      f.write(data)#逐行写入
-      
-&#39;为什么推荐用with写法？&#39;
-&#39;因为with 可以自动关闭文件&#39;
-&#39;防止手残,属于python的语法糖&#39;
-</code></pre>
-<p>#函数的传递 与调用</p>
-<pre><code>def liangzai(data):
-    print(data)#输出data
-
-
-
-if __name__ == &quot;__main__&quot;:#程序的入口 也就是主函数
-    data = &#39;靓仔&#39;
-    liangzai(data)#传入data
-</code></pre>
-<p> #字典</p>
-<pre><code>data = {&#39;一个&#39;:&#39;靓仔&#39;,&#39;编程&#39;:&#39;程序员&#39;}
-
-print(data[&#39;一个&#39;])
-print(data[&#39;编程&#39;])
-</code></pre>
-<p>#字符串替换</p>
-<pre><code>data = &#39;一个靓仔&#39;
-
-new_data = &#39;我是{}&#39;.format(data)#注意 format只和{}替换
-
-print(new_data)
-
-&#39;强烈推荐用.format写法&#39;
-&#39;特殊要求才用原始写法 % &#39;
-
-data = &#39;一个靓仔&#39;
-
-new_data = &#39;我是%s&#39;%data
-
-print(new_data)
-</code></pre>
-<p>#新建文件夹</p>
-<pre><code>import os
-
-data = &#39;我是一个靓仔&#39;
-
-if not os.path.exists(data):#如果没有这个文件夹
-      os.makedirs(data)#就创建
-</code></pre>
-<p>#迭代</p>
-<pre><code>for i in range(0,10,2):
-   print(i)#0，2，4，6，8
-</code></pre>
-<p>#文字加密</p>
-<pre><code>from uuid import uuid4
-
-print(uuid4())
-</code></pre>
-<p>#文字解析</p>
-<pre><code>from urllib import parse#解析
-
-data = &#39;我是一个靓仔&#39;
-
-new_data = parse.quote(data)
-
-print(new_data)
-</code></pre>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="383691a36bf5bceab74967a2fffad409d447430eaec2c32bcc3ac4248b573ca1">96f64bfa65c8b3728aebb0bdd2a2b4ee72583f29830ad537fc986a7f262e5b8ec710a21f06631f3a87391114df2795e939a1e76414395a63e08ee97aad2dadd913afb47f597117fdc504c4b45c9e34ec8218a636c4b20b025a431c11c92967f0030f8d7e906145548889d6c9d2f9c4bebaf2de136c4843559e1ff8c9b3fe7bdb2a308bb9c501bbc2c2b576b111fdc08a21ce5294fb4910548b65b8b9f7a1705b484292b50c1d791015ae386e1b1e3d8e83ab2d95a3074666191ac96f07dae2897896a991bffa1d0e6cd315a893064d98e86534f9b8dda0e4fa7c0ce52687043f29b8b65bd6e6c8722a9fc4eda26feac8471bee3ca089ba88835a75cc884ae893903a70a01b6ce9b0afdc202da5a8dd82c30e441da99f14b5317bb664e1209ecd7626dd15b7aa17f234201292ffc2049fea641622ed7d629474802d7cefcb5e50e78ac4f53ef1c48dad9a064714017fa3989599c74d18478071544fa96d492e4e283025d0c6c73fabd5636de625c83f0f750a845e9bafac2063b2f8f5fde1576e048b87aaeac82e3e927df06a43202305a97f544b0ba555d395a50ae7d0689b882497e4d9e94b8e5b29dc3b06802d261ef0285fb69d5fc1e4118a2199acbfeeae0367e37b41314add5782147411a9c1adffcebef1c47e552532c3776bac31190dea8d39e3a4555fef3fab15c66e1d9436d838a3b72dfac6fa060438bc3b45c0c539f9c1f9065de4d5af67bf7b7bfe03bb48935676b9e85601a1d5fd478dfef3781934b6b102066ed0d087f391497bcc606ef074648c36d5890b844ef00982d58fc8e29714cb3d7d1939c0dc1eaf110f52d2c045eb8051ca3062c52e857079e70e35656ec1a16d665736baeffbf8b03fc9321adad52f19acfdb8d020d03e2ab7f73fab5816b0cc62bcf07e0d99c72f17edc59f43cc283f715f3fd6fea69f3a97d87ded210faec5ad5e75bd3796679dd85153182170896b86e39a8e54f965f51fca16edfaff44604ae588f938aad2437a0e5d9d19b4b95c917ff902195e7ba01ddfd9902ffe47d9cb492dd059f29563ed5ad291356ee080821c6bb39a49544cfe244cf64413a7cf356b8a4f69f21f34b1824fb81b4a79a8389601f34762f7aa72ad8cf487cf0cbeb361fc5a454d92601cac88bfd88fb81659bf6c342c6ab9138ea397d9ae237c728dc532d80ece4b0a15122ea967874e10273418c4d5c790cf0f2e242c6211dc2cbe72dc7c0fbc381e085705c4c453bb2b61de67d4939dba20b0f18601d3dd8ac72cab77328abb077cbc85584160c58672c77fadbcf80fec4c9647df2e5e3097ef84da81c4cb3e6ebf30788fc2489b983c70c295cef5f5b6aa2a5c39f5e9cb341620ac47c06acfdc45eafd95343791ad2e3b3aa22436208291551fa88b1bacf065602188c18dd64f9cb4fa080b342b088448954f1627e4a947972297d232020f48d1a0947141198ffa350767b2c670730100eecfd916fe5661be1bb1dee46b34c0393569e413c412bebaf923d9c37e8700e140840cba4eaa21a354ca1a5eedae1ccc703cf6c4d5ccf3472aa020dd0d608654136233a91411d5e196ea84951891be950f93097a3f5d94a00660408e2833edb4caf2db84c02a2846dd7c797c6d352f83909c84c7e3319de4648f6e0c9a45bbc0e30512c051f3e70af085e5bb4119679d0ebdc98f08bfc71bf205c325db24191c574e7ec3a1a7e12928d294fd51d751c3732633c38835e353c3c6c4d925adebd7f158ebb15aea7a9bc0f73aeca4978b1bed766eb79c6287814f4b2e2fbca60af8f079be6ae71fa7ab2bc1bf23ba9c327a74fb54fe2845f789149caf45451c6f00a39cba28019dce9f839695b9658abd66a5a97cb7a4d8c02c72054bf57c9834c47409627e658fa2e375440abcdf5df43f616cfebbeb944a34635205756ce70eaef2c3baed0167821f5944010268142c31e63721fd737bb3584b3899d8ff844fc04139c843fccdee964f65276da692e7d9c87327ae84385508c701358e1b22c99549307b824afb93f46a6823c419d1eae447a019efc8b69497895f521e602f01b9fdc68c85b2a88f610f6cdbfb73bc38085e4e7b88021dbc55684c97f8f97219f107720a23fdb3cedd977477e8c3ce110f9d91f3f44535066f2de5fd3ba362f8ce704a761ef9d79c0f37cf4dd4321342300899facde72f7b117845f8ae8225276f209eae9e0bbcd36000192a242c033b39b7753c2efd053a34262cf145c696acb5a948ed8e73c20e6157262e74a38fd1341744c21262eca45a97462b42a90017371efe74ea93042c898a56e3ad94c1fb5bd15f1203d91598cde0cefed57b59f941e55f38d69805a356f78bd51fe4cd9da86ed38503457b93d73972819c67059fd805b520dada5932ab28</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1463,7 +1405,7 @@ print(new_data)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             

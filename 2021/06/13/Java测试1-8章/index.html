@@ -583,14 +583,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -610,153 +610,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Java1-8章"><a href="#Java1-8章" class="headerlink" title="Java1-8章"></a>Java1-8章</h2><p>[TOC]</p>
-<h4 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h4><pre><code class="java">第一章例子
-gou类:
-//姓名
-    private String name;
-    
-    //颜色
-    private String yanse;
-    
-    //年龄
-    private int nianling;
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getYanse() {
-        return yanse;
-    }
-    public void setYanse(String yanse) {
-        this.yanse = yanse;
-    }
-    public int getNianling() {
-        return nianling;
-    }
-    public void setNianling(int nianling) {
-        this.nianling = nianling;
-    }
-    
-    //无参构造方法
-    public gou(){
-        //this() 可以调用带参的构造方法
-        System.out.println(&quot;无参的构造方法&quot;);
-        //this() 会报错
-    }
-    
-    //有参构造方法
-    public gou(String name,String Col,int age){
-        this.name=name;
-        this.nianling=age;
-        this.yanse=Col;
-        yan();
-    }
-    
-    //static静态修饰符
-    //    1. 静态方法只能访问静态变量
-    //    2. 需要通过类名调用
-    //    3. 所有对象共享静态变量
-    //     4. 非静态可以访问静态的也可以访问非静态的
-    //    5. 静态不能定义在方法类
-    public static（静态） String dianming;
-    
-    //打印方法
-    public void yan(){
-        System.out.println(&quot;我叫&quot;+name+&quot;今年&quot;+nianling+&quot;岁颜色是&quot;+yanse+&quot;居住在&quot;+dianming);
-    }
-    
-    //静态代码块
-    //    1. 静态代码块比无参构造方法优先
-    //    2. 静态代码块只能执行一次
-    static {
-        System.out.println(&quot;静态代码块&quot;);
-    }
-
-    //常量
-    //        1. 当被final修饰符改了必须要给他进行初始化，哪怕是个null也要赋值
-    public final String name1=null;
-    public final String name2=&quot;藏獒&quot;;
-shuru类：
-public void shuru(){
-        Scanner input=new Scanner(System.in);
-        System.out.print(&quot;请输入名字:&quot;);
-        String mingzi=input.nextLine();
-        System.out.print(&quot;请输入颜色:&quot;);
-        String yanse=input.nextLine();
-        System.out.print(&quot;请输入年龄:&quot;);
-        int nianling=input.nextInt();
-        gou gou=new gou();
-        gou.setName(mingzi);
-        gou.setNianling(nianling);
-        gou.setYanse(yanse);
-        gou.yan();
-    }
-mian方法（演示）：
-public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        //无参构造方法
-        gou.dianming=&quot;河南郑州工人路&quot;;
-        gou gou=new gou();
-        
-        //自加
-        gou.setName(&quot;黄鹏涛&quot;);
-        gou.setNianling(80);
-        gou.setYanse(&quot;黄色&quot;);
-        gou.yan();
-        
-        //输入
-        tst ts=new tst();
-        ts.shuru();
-        
-        //有参构造方法
-        gou gou2=new gou(&quot;黄鹏涛&quot;,&quot;黄毛&quot;,28);
-
-        //调用常量
-        //不能再赋值
-        //gou.name1=&quot;abc&quot;;    会报错
-    }
-</code></pre>
-<h4 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h4><pre><code class="java">1. 继承需要用到：extends关键字    父类名
-2. super();关键字可以调用父类不带参数的构造方法
-3. super(可以放参数);可以调用父类参数个数的构造方法
-4. 父类没有无参构造方法的时候，子类创建无参构造方法会报错，就得利用super(可以放参数)这个关键字
-5. 子类如果没有定义构造方法时，必须保证父类有一个无参构造方法
-6. 父类使用访问修饰符protected关键字：只能子类可以调用
-7. 何时使用继承：子类是父类的情况下，子类就是父类，代码的重用(有相同的属性)
-8. @Override关键字 重写，如果有一个英文错误就会报错。如果没有错误，可以不写
-9. 构造方法不能被重写
-10. 方法重写的规则：
-    1). 方法名与类名一样
-    2). 列表不相同
-    3). 在一个类中
-    4). 与返回值无关
-11. 用abstract抽象类：
-    1). 不能new出来
-    2). 抽象方法是不能有方法体的
-    3). 类中有抽象方法必定是抽象类
-12. final:
-    1). 修改类不能继承
-    2). 修改方法不能重写方法
-</code></pre>
-<h4 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h4><pre><code class="Java">1. 多态是什么？
-    1). 继承的存在
-    2). 必须又重写
-    3). 父类引用变量指向子类对象
-2. 类名 变量名=new 类名() 
-   //打印出类的地址
-   System.out.printin(变量名)
-   System.out.printin(变量名.ToString())
-   可以给ToString重写在打印可以打印出值
-3. == 比较内存地址     equals()比较内容
-4. 一个对象去调用equals()方法，如果这个类没有重写父类objact身上的equals()方法，那么比较的内容仍然是内存地址，本质用==时一样的
-5. 一个对象去调用equals()方法，如果这个类重写父类objact身上的equals()方法，那么比较的结果就是根据调用子类equals()方法返回结果
-</code></pre>
-<h4 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h4><pre><code class="java">
-</code></pre>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="2eccd0dd2b068cb310cfa3e689ffafee9a59eb8f2f304d93a4866c79ffb6d500">96f64bfa65c8b3728aebb0bdd2a2b4eed9657e65438224e7ff86e27ab41b4e22d4dde7cf88f9863299780c8e535d66371d3910744c6fdf32be521e20b3f48bcc10d6cf400a0b95fcaac96d89711c2558c709c1df4dba0e6347cc9706aba2a2864b5a167cb660233b45d49d41b7a950872f735e2aaefd60a33c6eaa3cfa781dda63e14f7e56105500f99c9f4a6b05309d89f318c0caf847ebc7fef1e1c769f8ca7a14fe49180818a104c82b8a9bd30c7e75b1d3dd08ef6ba7e4bd17b796b72f9014cb19cb9cb20e280e90e158874af089ec0221174eb2e7235a1db050989761448eeee99ded1e7467ffda8c459454cdf3dceec0b9fd2c33b77e178506e664e350696762d4fe16379652b95e2f411aa7f81a0a5e1aaffcb9345bc43aad1625ffb777ff33580ac1b156ef0003b27e255c6252174d5d416bdc2364251d62eb544db952a6bc088c259694fa62d763ddf42147d48bccfce5d717a0af6c5903e22b86f02cd597c747307f6e41f68987f1ffe2f4996fd986a1f348d9cf7db0e024f55819f1b664b2a4ab150eac761356a75b2c57e313d1f69cbc5a0238dc3507bb8ba4a94fef11ad1d17615e9b08fbbd0ade33040386a2a9a794d917c18e73678f83113536baf25f3c471fb73d90960883e747582017769d57848926ef7f371c1349bb5011a2b4d1edd5a24f9f97de3b69f3f32fabdb8b8d93853859978b924fbebd933d9be2094c80b0cd3bbf6fe71b43c338b37c1cd353ef2c48fc02f7e77073dce08419d0eab5096604b648a7e36e3f60e04b1711a3f28efe8b7f5e1c5f5f5324b5c48adfbed4882ea0fc4af535613caa7607257e65b577821f4eabca270e7c2707eb6a827dbc6c354510c3bf4dd1c14d79c4e98a4a2bca1f87f4c1260dcd7a76b2def77caa8ba06951188c97481311e5fe7bc510633ea0a906c8d248a2926b8d33c53fb060fbf493600559447293ff0b55017859aa602221e0dbab4506334be0676bf848252db24b012aed9b24cec3a98c26bce4db2cfab3e3461f73cc37034bcc71b300b4fb2dd3b8a8a3a0b555aef00ce8000453b5a14b195ccfdd1aeb9bce8495da7c24e78e4cb9ff688b4069e2b8cedefac2bdbdccc2ab3cec0d5ac623ed3536b5fb450bb3a509945d02834d87a399979550883327e3f0b4dcdba47d147b6233d23c4b066a8779cac97c0e6ba327be90cdf09f43bc1c026d4b1496b2d594a10afd99e5aabf837757ffc319f28cb01b92b2ce5580d02e924a93f5ca336612c85e9a1ede67650eeb53acd8d789516b2bdfbb90113a74c59dce4cb5217edd34aa43472b5190cb508f7d713d93a2171d521ce807b2534a452e49356cafdf97b397fbd76af53da46eeefa39d0d6580ab5dc1b222563b531009379a444fa60a667d945fcac5b61c420c89f9f018e8e2ee05bc013ee4a2c7ecf2e16f2d3f0d76f21f01d9151bca9e15879830861f961d4ab84686355bde6e9f58474772365698f96987170c12eae4c61e97d3cf18e2a7e76dbcba823406b229be21220d89d2d8d050118594b7d6a0fb4b60871ca77da396592891e3a72c5ed1985dc5ea6cad0ab5d26ede8ffbbb52e319ea5176b4ff93fc91eb65e51e46e563c2e537cc3369f7548bca833b19e976967c55ec2940582717244b67d9353d7a0ee0a6832c69df80ae8703d786be730dd57e383de81b5d572c13e506d303e8bf0ecca1455a5f55d5257d4039e436e312ac3a842de1b78cbbff097aa347c8869017deddcad1f8497a19de2b626177cc04f7bb1751664175fe04ef6d268abd54b3d966b60468c74fd5a37c63477c4f788371700c2799932fbb7dccfc0f5f92a28dc76712c896294f2d7ddd6fed397d7276664ad8aaca1f434849a49bc70a313b077ca7f743c5f7937f24d516c85d07f57e9de37970c1d3ad4a8df267c6568033867d9df384bbb650748d4f1ccdb78ce29e3c2bfe06d4f5d7e942afcdf253bd13138d6b17f92858dd347079caee656a34d674348e85371a4fc0adb70f5ab8ca1c98cbdf4275ced76cea514743a912c9edecf93a6f9e3cdfbe799bad961ba6a30200bdbc7c1b5b343fa69b30976b05722eb41972b0aec886e579ba74b8995cc8291dda02a1ab1b9e0c828ff35b3cfe0f768567cf93f738e85f09074691c5c4682a7c6e6828aaa394b48f87c48e8b97802aa3128817ecb4c449c59fc9c3d68329b72490f7a82efd17d8eab43a65b7178eafd4ed06060014e6ac6702350bbaa7751992b7ea8376dd21082db4b236b9858a8283e1101d586e75b87ea79b01f6c0f3a0c4f62b9be498f2364f6c4f3b4c6ba8238e49a7e17f10d7c5c5f9524f0c101ee31acd84ce367c96ae91331be55ff6032c49cf8ce9d17a98b7295d5a25937d34820f22a08ee33e650ca59c3bdf5d44f91c92255b85c93aeec73675ff08f4db5ecd7287d016a2fedd9084667d497a884b81084c270ae1cda2715ff571d4e4007ab01c7a6a72a392ac90426e1b5e931fa11dea9eeae77edab54e78ea675edba4b5162e4137c65f5995327f85b3d58d1ebee4683fdc2fe5d170fbb070913ade242db2098acc7334ae0762a51fbf6659e2dcb4180cc73980855edc495a26726f0314b12cb369335e0e125f7a2576b2f2547871fdc16324626cfa6bd70648d2ac3fd5c88a2de71fd161888ad3bfbcc1e31f42ac2eb2b32c3a67a4420ba80233a6a6c3ca5a00d18573cfb5f650575c6ad3a4f72a7224cbfb67ebd801918af0be42514f9eccc160d5bd226a0bb6e4ce9cba7c07e46288459521e0368f61a3ef3e5c13f833f372903ab3409d8db1f7204270099f074ae200a70014e13e70f43d0e72112c4815b99b86541426d91ffb509ef0cfda2ab9aa2e4a97a1b254eebffad6a609e9e4ce2087a0a4f2aa2b7efa3b4c87b4229a1453d7779caad37f2d1d13e766f3d50322a328fa474e272adefbc4d8384c4b75ce8a105012d65af096a2938916ecd08cda9bc9e1d2744971db02810953f33976c00143b8d25e920bbb6302b06339b929a2fb092b87e192220ed40b34d382492780857bd052392037f6e4e2b2f97cba3b3e419654032f74ede1064a5df89d61b3780833a1dee8e4cf7203656cda506ea5db0076362ae787914b38ea408b1689df9be618113fa9bc679dd79658541c9b3e59aade982185cebb2b90447d1583d8b84b8b982cd45338505b56257531d7e680f0f4ad9a8aa5c3b50117b9ceff1d346c1c99db6db4553f7c4db97800f0b24e6e14f65479eb9f5e0401fc332ba6d00154c5eaa67ace12c362f907c8189c69914140809d2abe01637df4fd00ef13b57cf37ecc359bf3c66a5c235ad6bb35fce5c6e013bb64059a35f2b76b3a22e06c8db857ef00d521c51c3bf11672ccbe38c5283db43eb1401afbabc1f6a17cb397ed792ddd2f602cd74c0411dc5daf1f824596578424c72db0d716ce6ce00d41911e3cb92c94fdeda2ea41baf39e22aed3c043d19e18ca6c904bad175fc419637334b1ffabfc8aa6ed9b802797fc1e3540aecf2e4dc1f53b4f7f6ce30df5ea0f1b661acf311b177ba48c3fc17875ba3bfa926da346b5e5e6923031c502a9cd14120776f66b40ecf42c7a07d9e501b289dd943ddb5406d47b048524e7754411bf8ee9fcac3e9495342073cf34c45b6a19ddd0412036081448f21855d941b324bc54102988101f0869e1152867a79a21c3afb24fe8ac462bfe25c11e2473c2a3d79ab59b5b2a1c792f94690788ca6664bdace180e99a006915859226ad44e30f1fac11e5ecc9e106e995983532deb30a44f13bdd5f5f4df4dbf7241fa92f14a8513ad79971b5cef1a59fe89860c81131e3fedafbe94d321db2093f126e6dffa7260fcbee64e02687c94fd80a2934534d6c9edc99d56fa6395af4a592cebba8c50d341cc4fdd35f338a36fd41d2da10210ed8fbb554a3b0e21e35c496958e3bbbfd5f0cd27daa8d3744b2e7b9c376a5e8cf40dea4d92ed9a5b9f4ed819c5106f37032c4b9247cb5967d6533e278eea2040fbe4a856eef2ea8dd2c7a6c559cc909757e80b004afbab8b28a7637e0ec7edfb1624e2a4d7e7aca79d7f5502af97ee6451285399b095488aa45b47cd2fbeee9b9268887017db11591e87e9744fef232c9c55689b8c210dd7f7bf68046f09522185599fd79fafe863c9d57b4c10bbee4295d4db89cc8f5daa33cb8ca36444cd678ac3e51ec050aa652737e89ed723a5ccb5127c1535605beff839951f7245a368e4f0892893508406a3a21f442c13da50a9558134af1c69e201913dbba45cfa275bf7e790dc538e59bec1f37025326a9d38cd1ce4dfd3a4fc98e6e6767e016f43cbda9f1cccd271dae3f88f5eab2a5acaafa0fd4383fec22e146e8a4eb880bf110ad69ca4e1a245273f7e6e97000d08d211f797d3af312aae4c27a3eac572ffb3602af1ceb118905358fb15d0e45767eba97ee11c266ecb860df9f5be2e037ecd0cd84161c579b84d04715e4a153131152f176cf29a270c9d64192fb1bd9a6171794d6990ee8ffba6906a5712999d1d7e0bab2bb111c3522f6a0f739f54eb4711e1eb62c1e53ed4a5de37105828182e62f26622b4ce48c7a4ba13abd3dd6396fd22880206237037c036ed0203a3fb8502438934e8b7959d0bdd66b8ae9c65c6d92993b7040f8172713686df6567f6d37b239635bcd2e0d062b85443b2bc586059b80a103c431a68e6704e9459f799aa3b5d409ad3c7208f1aab7de07ce80c1048f0ee20c143e5f347b5f24f8c5b68a004d1a88de333a5d3b1886298a44f308a1b5281798001561906c1a05e1e4fab863c8580e3db54a9f0e090771d2f7e6b3fd861e1b74e6dc793a07cdf6a289a4bdca2e9370412c0297e9806a86f79618a09c0ce5dc2310cd0c5d13818aeb10daf02659a4e5fa2b605435c069b71206a9b8493106348aafcfc0a86fc98aa732e5249dd1f33f5cd6c00cd6ca44eefca3e97168135c3d8707073a533c0d852d995c904e994d9b862affdb846ebc0520a896e5a6902e3bdc71fbd08534da3c9e5334b5ab4b7b0ca718363b15a53a4dd0225baaf507acae4b2fdb3e3b5700b2ff5190ee178dbfea875dae669be3f5f9fe0496a3add430e72c4ef2f56152300db94e2a7fbcecc2d346dce93908320e55fe2bb4e73d73c204e63ce034b5f9de4f5902ed5b78b4a253358f6b16c4203e3f4b2b4d165b807aa99129226c3751496e526a585a05397fb96485b7a43bb867a7eeaac8987bccc0e300002b7532ab794aab30dace8568709f9d27f6b3fd5cbad505dab643b8d662ac7034e1de4b629075d3a5d4e12cf0470339bd060536a1fe7c4a4af511d0d2e40adb961ce989215cabaeea2ba9281e4c09710ab91dc27ceb783fa3bcde5220fad8b2230231aa740f16f86cf5a290945f2cae13bff448032b5dc57dc723ebe3c3d237653a1d6b2008f757f5f7a887b4dc7643ce8eda46f3e9318837b5886412019ec8444baa43c79429024a6e4f7381653a073f86fe3324583f3e2c1cbf9a4a1e176d740151d16d98d79333d2f0decc29ae5ca4fe06a63b58d5e881b8200b2bf19f3ac978c85e29543ba8b7dbedc84e884f9c1656db7904be97d7c03ddf96b34a26c4a4cff341ede55d2e3d62fe577d5a9c46f1fb797810ad0380090a66683159202b027354f03a2129a324c404b8e3ef903c987f76b4a3ccfb41c7b9c5723b795381caa5a4b34bd52c9b195cc1d1a1905b900c605a12b05bc27e00e1c3c168c43cc46e4540a1cab782c9d908069f9ef2766309f25c74e88abf38cf7393021bd14c3da5b80d231371e9df0bfd2444e2c5c20c3098fb10b1eea877d6e3b01a5a01e85c6c9a070b54439643559ea700dde0026a6030c77540c0cdea3a61e9eb0ea0689a2f580f23c1e9e526759310095f6a13635197d10944d634655ebb5b3164d5fd7d068462d21c17ff03fcdcf64e25c6ff5706efa42152dfadd985d2e984094700777bfa4caa15da2853802c35191bccc6daad3f0cdb024b570978fd1901206492d26d5db721b51e0523d5d71fe084ed13d43c697ea45470d13e725748793684b0f7d25c9c9033ef5e446c3dd8b4bcb5d0e63599d8a7380b08849f3fe9dc30b6198c8156975c953abea22512c158b38139ec0452eea658a21002e94b87651b07d21f8450317cba82bd288aa9b4452a858274d4ec40f9dfcd6482a1dd800f96b675f623a977cbc4b68b193e64e0fbfc640418fa79f306b2aeaf9315c0e05b28e5d3b72c5f2d1eeed0c54fada9babd9d2378cc9de78a47528b8f0a8d6c7626ef5bdae4e2bf41cbf0dc37bc5b4718fd46caff3d748aa1b8566c9c9b12f666c2e9f4c18db1880721a722a0514b088a6a10617ca2f86b886d4d4db238d573c61b5a4df8f65bbd9d11421765fd67f6e5b2540d6da9c3d4ad7a9d8e578d9de920176143125f1f2f431b0057de7240f606c4a922693d7de47cfb424e63d132ec10d1c63583ec7bfa53dfe6287b45282583ed87b21aa20026329bfb735279d73e1acc04e207e20941a611ba7fc9246800bb56d0384df26a05ca703fe89a8b065ded5857068c661454372537a2c6fd0d125cfb48fb73dbfbede6761e1f67c362c4afb8c83a722565a2fbec11d34db9ba871bdf26b607506177a51fce78d43e23f7b9df13159185d89813066e24c740ded5722c2b3150c4064b6ab16de70ff7b255a46445835dfd3c92a5aba25b3538f47a747daecc06374f4668aaa83cff14d69a5459eb2bb9146c8874bf22ceb61d3e59bb5736a5688c668dc2edfea1290551fc111b44bac745d8e571768c5dddb72febb05a452369aef9b83150976680ebfac0ca5ad61e36f82c541020c756a14407e96ab09a97c98c86455615e3fb1a4df835f1cf6d878564c2da3eb6f0d8536b01fe7bb61ed7b7ee671c382dc4750fc2b98fc8f341d5a069cefdf69613d64f46f49304f0124e1df0f1300cbd231dcee9a90b71156b9b4be92b1b773e576ebe95509ff3fb45fe34d27c0405aff2252a4a8161a2b6b15437131d9a87a411a2a750c5c52ab55454ce130639b21d21875f0eefaaa62008ed0bbcc24ca4fa299dc60047dc63f8d5e95bb07946d570ca863caaefe165182086f37e5a889020634beec2339258acad8082d157ae330bec40cb4fa3477f80bad2fb63b8c49987119b18c6c4fe748ca2ec0103d69a13ff11cde6324e8c0325ebe7b2cf7e3fa86c18a0e9f24298b9d070385db7546f2ee2511e6f7a0196bd5e27bd0de09b6fd81149d884064536f86fc0fcfcb84b487a631c1f7d7e5dea98bb03a746338866b550223cc972c90f6ad395cd33dce7ad6e7f27ade491c06f04269a2a8e827b79024de8f75c787346e22d4ec809f35906b6491d13bb947f73957f1ead332159fb6d3fa3dcba51996ffa55a4397d7a45b2b40158a17e341a12c2816657ebca356ded1019d97d073fd134fe70afc5a558d0e5467d6f816b2e62dc710714c2277ce45f0552ab8ba0fca68f5aea698bfd392673d4956638db1c8bd4c7e510797d5842eadc45aef039d0597f7429768ce353b74d71e733d35a3a625a11e40e203d36d246f126262e0b95a50fde4b7f46ad33df74b44a38a8d6863774d8f5e35c64c4271dc148e97ab4cdedf10ecc309b05d23f49f1454a3fba12b723756e1bb64c550ded2eb6e34ba1d8592b67ae36220fd2fbeb7ff075f2e1b96d8838a68ac5a866a62c4d25b0130dfe4c3f76c97cf544786e774387e002d217d3e1b5b2d08d6b37f492c37c381a4974d23e7b81bd7a3f578eeb6a3eda0397de2f9f54d8876f4cc346155dff4ba72e2c9db3843ad43de7c1c7bfc60be16a32ffca2e2e4</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1275,7 +1140,7 @@ public static void main(String[] args) {
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Here's something encrypted, password is required to continue reading.
                         
                     </div>
                     <div class="publish-info">
@@ -1548,7 +1413,7 @@ public static void main(String[] args) {
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             

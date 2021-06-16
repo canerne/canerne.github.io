@@ -583,14 +583,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    612
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -610,103 +610,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="事务："><a href="#事务：" class="headerlink" title="事务："></a>事务：</h3><p>事务必须具备以下四个属性，简称ACID属性</p>
-<p>原子性 (Atomicity)</p>
-<pre><code class="mysql">##事务是一个完整的操作，事务的各步操作是不可分的(原子的),要么都执行,要么都不执行
-</code></pre>
-<p>一致性（Consistency)</p>
-<pre><code class="mysql">##当事务完成时，数据必须处于一致状态
-</code></pre>
-<p>隔离性（Isolation）</p>
-<pre><code class="mysql">##并发事务之间隔离,独立，他不应该以任何方式依赖于或影响其他事务
-</code></pre>
-<p>持久性（Durability）</p>
-<pre><code class="mysql">##事务完成后,他对数据库的修改被永远保存
-</code></pre>
-<p>视图：</p>
-<pre><code class="mysql">/*开启事务*/
-BEGIN;#手动开启事务
-start transaction
-/*提交事务，写入硬盘，永久保存*/
-COMMIT;#手动关闭事务
-#不设置自动提交  0 关闭   1 开启
-SET autocommit=0;
-##创建视图
-create view 视图名
-as 
-查询语句
-##删除视图
-drop view 视图名
-##查看视图
-select * from 视图名
-#查看所有视图
-use 数据库
-select * from viues;
-</code></pre>
-<p>索引:</p>
-<pre><code class="Mysql">#使用比较频繁的列  需要 索引
-#添加索引   普通索引
-CREATE INDEX index_ename ON emp(ename)    
-#删除 索引 
-DROP INDEX index_ename ON emp;
-#查看索引
-SHOW INDEX FROM emp;
-#主键索引 不允许重复 不允许为空
-#唯一 索引 不允许重复 允许为null
-CREATE UNIQUE INDEX index_job ON emp(job)
-#组合索引  可以重复  允许为空
-CREATE INDEX index_ename_job ON emp(ename,job)
-</code></pre>
-<p>备份：</p>
-<pre><code class="Mysql">##备份数据库
-mysqldump -uroot -proot 数据库名&gt;D:\\要保存的名字.sql
-##备份表
-mysqldump -uroot -proot 数据库名 表名&gt;D:\\表名.sql
-##备份多表
-mysqldump -uroot -proot 数据库名 表名 表名&gt;D:\\表名.sql
-##恢复备份
-mysql -u root -p 数据库名 &lt; 原数据位置.sql
-##恢复数据
-use 选择数据库
-source 备份表名地址.sql
-</code></pre>
-<p>导出查询数据:</p>
-<pre><code class="Mysql">##导出
-#查询语句
-xxxxxx #查询语句
-into outfile &#39;路径&#39; # D:/表名.txt
-
-#导入
-load data infile &quot;文件路径&quot; into table 表名
-</code></pre>
-<p>MySQL(PassWord)加密格式:</p>
-<pre><code class="mysql">##mysql5加密     例：*23AE809DDACAF96AF0FD78ED04B6A265E05AA257
-</code></pre>
-<p>设置用户权限:</p>
-<pre><code class="mysql">##设置权限
-GRANT ALL ON *.*
-TO `小伟`@`localhost`
-IDENTIFIED  BY &#39;123&#39;
-##刷新权限
-FLUSH PRIVILEGES  
-#改用户密码
-mysqladmin -u root -p paddword &quot;新密码&quot;
-#改其他账户密码
-set password for 用户名 =password(&quot;新密码&quot;);
-#设置当前账户的密码
-set password=password(&quot;新密码&quot;);
-</code></pre>
-<p>MySQL:</p>
-<pre><code class="mysql"># 同时修改 一 表  同一字段的 多个 数据 分别修改
-UPDATE dog 
-SET `name` = CASE  id
-WHEN 1 THEN &#39;大花&#39; 
-WHEN 2 THEN &#39;大旺财&#39; 
-WHEN 3 THEN &#39;大土狗&#39; 
-END 
-WHERE id IN (1,2,3) 
-</code></pre>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="8737866f9a40529b97a20841f307a06324e897785684ad682669dabe5bbfbd3f">96f64bfa65c8b3728aebb0bdd2a2b4ee386931329a234c17dce58e9e8d4f1c42e04d30b6ac83d6ece71b58f50ea9dd1e76e41ffac1303c0b964033f40080ec9d81703cc8c5758de0e9b84e7a850633ea089c0e0b97d07035d383c4a3478239144f675570a473dd6d8eab65b4707678375621fc440572f09b729700cfc14040397360c011ba5e958817991d32611006a5442bb4b87807b7ba437608293d08111759d7f24186b08cd8e145377a16626c70bc8404a4cab28bc48515c92c7ed5cef1dc7964b1b6aa9918482d06b935315d64b41f7f7be19a868a35c75a8a511d284039d0f5eb692cd7e91d1f1ba7d5307d92f243a726f22228a46294813876f25c1366fcc8337b80cf04d72edb8571638a99e974848ab018f3c85cb446d7b35a634cb328ce1dbcab26bdb0cf47f85e70a26e34b43608243f4c262feadddb7812babc0e6342895a76ca765bf88d8851191c5435c7ba5def7776778d519a2dfdce88254ab936bc26ca1f4815c41736c95b5be0a0fc13fee88c61e094cd330cc6920f7af1e45ef9db65a71b833e23de7b25570abcf111817c9e786727ad8a1b9aff2edb2c7739947f7497d0795ab2446dd7fe0969276397dcfeb6d9a9a1cec3e6dea47577fe5eae6ce54936f770f03697c7130c879e99c202f302cc6b59b8fbab7a79617409f80641f898e4b8e967824c2cbdfeba4811ce68d7f578c4f80404543936934ca1c646015b95bec8cbbfb589b455c053e29e6af721ca7a48110f4eadb4dc30844aa55bb606933178b69f48d62b2cabcd24fb8b72be84ccfab933ec8aff9f24a1a3126468cae91648d4ef02ddfd3fef1b2ebfff95414dcbbe25af1e62183a6e2049ca446c3954f16dad8aa32021d9dcaa27c888c8b5b3f0580469b75f567cffa94c5f480d7f829c2b79fdd1bb8615938b4c80c0d065db4920593f28d0961af73cd5c4d0a71c583732e6b306d752097935848c943baa92e2cb1ee73fdfe59768a34b1b200af1ae6cd8cdcdc189357b2bac52ff3be56fd48813e26e15a76a931692e33eea10aeca66a5b0ab68d01cdd753d265b55d175241a6e97763c0910d8623e8ba63102104d80695030cc3ce495e1536051633962f99e66b2836283e7f1e3064fa290d391ebc1abfd0a1e14110f89bc771e5e1a56d775f7449f1263fe998d0f83533a12ce0d7f9923fbf39b2f6eb82e235811c98e18a35e507627842634b677df28e638b6d0127f14aecd1bb594dca2999c34c212119cdff2234f4c3e17468c2364caa892b2a88b0cce881d59dd7a9310086c7831a3a40776329ba10740388f262cc6c453f6b71d04831ef078c42357154b7de08db462fa17abc32a827a7997ebc451df16b2a1b930d85619848451dbbd35aab08a88ec2e25a8f3793e5a72b1bbdc11f8873efb5a2670e283ad7def14f58f97e3033ec4450e6e3d0a8ba65c77f8afc957b385bdd2af93ef531782d48912b493b64760c2ae28b6d701fcfcee7a9286856101ab1dd590cde07dc7f8acf38d2eaa32085c43a2508f3eb366f6673c7ef097c38b405dd3d20649c8c73aa66924b333ef2d1dea8f37f75607418c755f74d4abb7224b8eb295846a710273b087f0ef88172aa15b18f901e69ea1774207646fdbb549251f699981bd1fab867795000c5a7e92170909864929227036cca55cd17c823f466326380cf62365da49a3f8a2ce1e950c6d0e08a942c64e37de2fb7fce6d71a268b3b0236ffe1aa2694eabec53cb8b07172491ad4b86317f5d69eb51ef60b1a6646ec721c4eae33aa1f397022b3cfcf033ce929d488c4c07c953687fe8e0c7d52433ae250ec5d25ffd7439927b270ab6a43f12499ec71045c698b9f00f5c0fe36d61c80e83100cacc41c0a9a80912e669b5ec6d94866226a5e03a1229ec43d0f1135bed860d1b28ae7fa64984183cb146ec0bb23e8ebd102db1693e45af6c77676d6ddf55b8b2ddad691e0bdfe4466fe4433d91b7e085af7f9118d196e4ac3057f95352d69317467b3aee55ae7b15117764fe302f76864396077525cf6633dda4f21ea1ce0db1ec049431a033026263ae241de8e458a071518cf06d8f82da5785389895f8fd3db346e5f95db7e58e8c2f69c7885b9bac5b3b9e9d5d489181a8003157f885af6083954e586f454b1d6abee9e17ed81c9891ee98cb8b09a156d17c47f3aec35ad3e08c8c12b873c1fa91e725dbe159d1754351d6a46545c418527b9c1e249273a693d8745b1fe6b6981c41e93ee29d1423cfae98fdfce0ffcb4b5b4a710b62e2362f9d46faf2b4c4696afb1bcab2b2391cc6cb180b19f27e084f2c37bd3b6ddc5792d04410da5649647d522a60932708028f7dc720f864ae62e6f548fe69356b3d6affc734333c26843bad617b6b4ce26b68bf975a63ed7cb5cd8cfa1d4230367eadeae6f29053373a754e95ce0720e0838c1f831eedbbc2b8a298ea97cf5db26f4cd301928fb282f96c1fe500b699315f304506bdff5049637f0ede921c7fc5981a52a125fb941402f5af0e5e35deeeda91d8418ddbc9bc3dc55383bbd646afbae11700c3c453937b1ac5cf272f0fdd52e77d1e0ea56c0aef2d64da99c6495bbcd759c9da516f214b82745a026bc24600cf062d8b424c024e7e037ae5cfb7cd9747080c91daf4be35b15c83a38bb63fb9ac77c6a8c216faeacbf78f8399774184b5001af515fde00496d250daf8191c318ea16bdce686b8fcf6ec6b32dca7dda26eaf09a413774f9fe5d17f7ac4cb43cc2115992e649ab325f2f17aa8173a9e8206ef27700b17bda4a44105c8cfa72bd28ee79075552b405127a7d63a76d08974d374082d225654ab6f3c0d042f4a726a6566404a0b50ea8fd999106022a6a6be6d18f0d9868e0efbe20194d2925a182440ce451535c8db416c7de7d80eabeae2abb54737e98dfd3c5de09c8f41c1a48bc1afa1d31fd762b3729482694a1b849f606d559b2d9b358fa89c44ddf5211320fe24c06c50821978b9e541ac5849f89f92c6685be3366a382a4345823c7534ef3c5079d49d6a29dbd7455354dce538223fb9b74e1ad40cdf3a1df7ac64c6ed1c7a95bfbd717a894fda9360970ae827e3cffdcb4ffcd58deeffd12265040b898b961a37458c69913b0e3f962a6280f1f7674adde21342c90e8cb9d83714eff3b62bcba2070cfff38df28e9a137899ac7ed25943b203127ae86050df54edd1e5b2ee4085e58ffe62fe9c3b0a132bab103683ef1472f83956cfea69460ce753f1260546d7bb3ac21900b4af4ec48c0fc32576c73f899412b411605053129e9fa57798b2e32679731e9a14e67a42262d7a99dafd48be86183308048bb19726abb18f5ef5d1e0f9f6912e2b869b8e5133e7a9e89237a8fb6d1f8b8c86d04340ee550d089bde7c634c971cb90d5934f5883db7029e241d01c6f924ac1da285e6ff9ac5d90071e7e5e2c2e1167cc4f73b8397e88848d494a4aeb25a8c014e946327ad86fa247d896dc480cd3c14d2176499dfb34204db3a0cdac6b701b8c867403dd7118300dd8731d498abbd7e80abf9ce44540b5243baec220084c3b70a2c012e0858a1a4b9353fe30dc795cb287c1966c1f90b7efaa8326db44118e239a25b1380d3a153d5f7fc297b8771ff378edd5d20215903f0d47ca52942e2ab3d1c4031a9f06212ec6f30e7c607114175d99c3ace4fe2b952f3e9cd82b142f7b14f6ad45e6569406991ba404a5f32ba037bd507cf363a9087df22cbb745cd25d30f7e36d0336a3cadd8076421b2ee4d595734706b09ad2f5c9b012d996c7e108c81e135fc518d1b165a62552a07187565652b85a4b017b3ee5ec87159a031440d6eb31ffd761161724ad842f1f32349219ec9e79449e67289d727d14c62b4ca0b2598b506e35cdfc6da4529db89d0358523aad99fa81a382d6047e24786af063b4a384581f9da017969df1a448a443de94eb968cb56eeb494cc452d0f91fbfea3a891e65a0c82cf48c28538a086d4dc4059e50f83ef73c6ec5a9d5269f8b063ed8d7c4cf3549c7ccbd1b83e5240d371338fba04d371d5eb3c759209ab9330afd9cf7158b424a0a0df2d8884229fcd623fbee6e7843beeb9b25fc8d8b3a7dd0fcec5adcc361bc90389d5d9ed662da5c541e993e1b121f40cacddc177a131d631f34f9d66852c6ea6ba6ba1119565ff6f5122d37b97fbe3d5aece9f242a3cbecef175d13732837442cb17e12aff1334df7f03425971a0b8c98887fe85179f3e86cdf96466575b29d58f6e4f8b9e448a7955aa4603eb2c47fb77d32ebe6715a1ce12d002b6f4bbfda3054ef927f50f55b0a154e3b4c9ec44ad7666445a27b6acafe14ccad943c893ade9f86d929a052502cebf5f0b6f850550e27689a9903a203039d924dfa7ed9b6e374f7f415b1ea5f0affcbd350f0be741a5804f4a261028702ba4fac856c63e42f60236f875716b1929115712ce027a6651502e9b6e640b653107182ece43e0dfde48f48c5e7cf6525a90aee618121a70e20ccd20b98b86af28469a5e55abb290ea</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1490,7 +1405,7 @@ WHERE id IN (1,2,3)
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             

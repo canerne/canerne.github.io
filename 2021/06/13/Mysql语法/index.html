@@ -583,14 +583,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    688
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -610,109 +610,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MySQL：</p>
-<p>[^小伟丫]: </p>
-<pre><code class="mysql">\c #放弃 当前执行代码
-</code></pre>
-<p>建数据库（指定字符集）</p>
-<pre><code class="mysql">create database shop(数据库名) charset utf8;
-</code></pre>
-<p>进入数据库</p>
-<pre><code class="mysql">show database; # 显示所有数据库
-drop database shop; #删除指定数据库
-//增加条件删除(减少报错)
-drop database if exists shop; # 如果存在就删除
-</code></pre>
-<p>查看数据库结构</p>
-<pre><code class="mysql">show create database shop; # 查看数据库结构
-desc 表名;# 查看表结构
-</code></pre>
-<p>建表</p>
-<pre><code class="mysql">create table 表名(id int PRIMARY KEY AUTO_INCREMNT,cname varchar(30),description varchar(100)) charset utf8; #指定表编码（如果不指定默认继承数据库编码）
-desc 表名;# 查看结构 （SQLyog）
-drop table if EXISTS 表名;
-</code></pre>
-<p>建表尝试</p>
-<pre><code class="mysql">CREATE TABLE &#39;tb_student&#39;(
-&#39;sid&#39; INT(4) ZEROFILL);
-CREATE TABLE &#39;tb_student&#39;(
-&#39;sid&#39; INT(4) ZEROFILL);
-</code></pre>
-<p>插入数据</p>
-<pre><code class="mysql">insert into 表名 value(数据1),(数据2);# 仅限于单列 时可添加多条数据;
-insert into 表名(字段名列表) values(值列表1),(值列表2);#添加多条;
-/*以上句式在MySQL中不支持*/
-create table 新表(select 字段1,字段2,...from 原表);
-</code></pre>
-<p>查看表</p>
-<pre><code class="mysql">select * from 表名;# 查看某个表数据
-show create table 表名; #查看表注释
-</code></pre>
-<p>出现乱码情况</p>
-<pre><code class="mysql">set character_set_client=gbk; #设置编码
-set character_set_results=gbk; #设置乱码
-set names gbk; 
-</code></pre>
-<p>修改表</p>
-<pre><code class="mysql">alter table `旧表` rename `新表`; # 修改表名
-</code></pre>
-<p>添加字段</p>
-<pre><code class="mysql">alter table 表名 add 字段名 类型; # 添加字段
-</code></pre>
-<p>修改字段</p>
-<pre><code class="mysql">/*修改字段名*/
-alter table 表名 change 修改字段 修改后字段 char(10) 属性; # 修改字段
-</code></pre>
-<p>删除字段</p>
-<pre><code class="mysql">/*删除字段*/
-alter table 表名 drop 字段名; # 删除字段
-</code></pre>
-<p>添加主键约束</p>
-<pre><code class="mysql">alter table 表名 add constraint 主键名 primary key 表名(主键字段); 
-</code></pre>
-<p>添加外键约束</p>
-<pre><code class="mysql">ALTER TABLE pet外键表 ADD CONSTRAINT fk_typeId外键名 FOREIGN KEY (typeId)外键id
-REFERENCES pettype主键表(id)主键id
-</code></pre>
-<p>将查询结果插入到新表</p>
-<pre><code class="mysql">insert into 新表(字段1,字段2,....)
-select 字段1,字段2,....
-from 原表;
-</code></pre>
-<p>更新数据记录</p>
-<pre><code class="mysql">update 表名 set 字段1=值,字段2=值,...,where 条件;
-delete from 表名 where 条件(字段=值);
-</code></pre>
-<p>高级查询</p>
-<pre><code class="mysql">select 字段1,字段2,字段3 
-from 表名
-where 条件(字段=值)
-order by 字段(学号);# 升序
-</code></pre>
-<p>添加外键事例：</p>
-<pre><code class="mysql">#pet 主人id 外键
-ALTER TABLE `pet` ADD CONSTRAINT `fk_owner_id` FOREIGN KEY (`owner_id`) REFERENCES `petwner` (`id`);
-#pet 商店id 外键
-ALTER TABLE `pet` ADD CONSTRAINT `fk_store_id` FOREIGN KEY (`store_id`) REFERENCES `petstore`(id);
-#account 账目表 宠物外键
-ALTER TABLE `account` ADD CONSTRAINT `fk_pet_id` FOREIGN KEY (`pet_id`) REFERENCES `pet`(id);
-#account 账目表 买家id 外键
-ALTER TABLE `account` ADD CONSTRAINT `fk_seller_id` FOREIGN KEY (`seller_id`) REFERENCES `petwner`(id);
-#account 账目表 卖家id 外键
-ALTER TABLE `account` ADD CONSTRAINT `fk_buyer_id` FOREIGN KEY (`buyer_id`) REFERENCES `petwner`(id);
-</code></pre>
-<p>查看表结构：</p>
-<pre><code class="mysql">SHOW CREATE TABLE account(表名);
-</code></pre>
-<p>特殊类型:</p>
-<pre><code class="mysql">TIMESTAMP #时间
-decimal #money
-</code></pre>
-<p>创建本地用户 指定 库：</p>
-<pre><code class="mysql">/*创建本地用户epet,密码0000*/
-GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY &#39;0000&#39;
-</code></pre>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="77313ec400f384ddea1752bf3b88f8475676b95c8e6417b67aa7e1db3f5661b2">96f64bfa65c8b3728aebb0bdd2a2b4eec7583ad28d843af98707d20dfface0b8c9bedae59b897c263f8c471fbc25be328559574f09001bd270d5d8aacad65fe4f9ebe22060ed5f493582baa775c1a8771828635246b2c579a6ef960e7da79b61153471ea12f07515baf2384ed92c1d3574c430c3064a56994c0a282c4081ff41b85efd8f9e1520f564c6eab94f9855b449565b9f8fcfc117a01a2b43891cd8488cf97e67344d88dee4849e184064b79edf86d006d286fdbf8e84bd79213080c7f525331c4786dc9fa522de2280ad8bfb73ae76fa6d8cc60fadf384b88d6c820db1e4e579681f120c5ca063c9cd5897ec2aabd3dde99241d7474762021add9f704bb84ac188f086344e0beedc037ae470fcfe2dddb2f73bf72991a00d4fcdc3094b6c6fe2b4d64b720f4ef6007ee2b26f3efd5531d678360e20f0d68fc82bd12f21ae84c8f2d66cea3a98e2737992dde5689b5f09585a6f82a400d72590ae2280dfa52aae31ad56f6ef2aaaaf15c9240de6df253b13bcdbcdc9bcb5bf34194886e3dd7b200a211e5945473aed069c27961e702710dae27f4a9cf13fdfd94e263ec095d79cfc2756684404a5b56e9c26b5e862d43730b09aa0d7af1aaf1de85bd74779215e8aed6da7431fb40cd116d4cf05b41c584894aa8c72cd662a6f565a5081fc47a76c037bcd559a62597aa317c9d200488f03f95a2ae72af7d09e65883d89361ec8501248cf48188c414f08c0afd93d21eb6cc892c19e3a1711222443ebd80de08d42826ec93e10dfdb97efdab3fb6a953db64ab1203d4b3787db5c23f5f3d3cd8892e38d4fc1f31571f2bfa1a2c86e930fd7848b9e42867a2ed65f4f8f801583c664e42d286f6118e18ab942bc05b44d538fa5c9a3016448f46fea6a15ffa9e978b9243dab959691c1426ce433fd31ba1b801b5a4b85467394b779b3eea70e44781c6389f20d46642f093395d4362bac3880460345fe7e64a21ece746cdc94a726a3bcb63a6d0ad58be1669da08bc13fb442fac8a7d1c079a01b5d44a3fb1088b26a575b22f14d135bab1434f362be9066c69ceb41d89d2d1a3b776169e5df2629e71ac3aca2a4bad22a7b8f7c73c5226ea4c43dc991d2c0ddabb582b2d2503b4675d94595bd806af8b680daab3ebe202cdc79d658d16776cd7f03518f7188d9d4d83985a2b9be02328157394a3f74b170be8e9f4798de3cdbd06e85a66e7263ac239eebbd5bd706e6257ef3db22ee6eb32e66345728cc0688301404b41aaac5238cde825310341defdb031bd31cebf872e0d5a4399421abeafe0bf07f2432633d37f156f9dcbc88dc75156c8a28b4284279332ad4abad80ca71ef88b08774177c1a4527c04bc147029352974681654d0543d367b0e0a295f87767da61dddf985d0995f353cc64e1cc9a067e9f3fff9fdb20573eb1d1eecf4d4b146f3281783454f6f0e2d9538dd0125a0761fcf1c6a57679add3bcdb2cd325497ca7f9b5f8faa88969b3099c9ee9ba61ec6169e096bd9358e55bce78e9b0439f49ce748ae770bebafbcec30694b22936f1ab3f17e0f1b9ef6c7117ef66564a8e81f1d3dacfc2a2dc50c8e38db68813bb61c44957206e5bf7ea83cd5593a80681df61afd37800b16ac5cc5b7d78af6ad6d143652575dba8e34290fda797e9c3bfae36eb7b8db295afe3df253c9c7bf3887fc9039222f0cf5ef29cb219c1fc6e62f5c83559c1b2fbe37744f485ea63f0213d53c3b787d495d3f0b8a6b9f7e6447395c014352bdc26d2d1b337b6fce12740a577e8574184279f9a23b81a7cfee8f524ae11f740f07d948be4a88f23b5e6b99f581d047b834c38e83e909ef75d38a2dc8e0264ebad337b0cc87693573abed9a27c478df81b334b741879bbe5346b14168aedcfe95208746668f19088260db0a51d2017f007708b557aa27d089453b753af34f2268f7aa391c4d6bd8faa3d41c07a3ec1834c29837cc9d63ae2b8e1420b7f28259677a78d1df6b4a674909cbd9fecdc74fc2482eb25f60623bf2a432cad1abc062c6dd29fa056d9e4ce504e601a2336d561e26e9fa1fafd0276a2570003a19176c2ae4c05869489eebdb6b8a9b2178c01f564ce566c26264574063c8b54f278369e93bcc27b7e2a5ea769519d056cb9b8471bff2914056dcf1b532928ffa86c838b76e0f22b9414843c6e5cd62d7cdc93891e765a1f251dd89f49cf569c19d111652b9c11c9e5f2b777c826dce8d9e6a54f561aa7c4cd976b5b2ff907225d707aa2c4c736b13fdc7c89ad36f4bb834fb75d36a138f166d4a42a29cdf3cd96b9f135679e697200f01561bfe2f1bdac1309d629484a6aff85cc966e274bba47455df84ef84503472a1cb4b4d294d242657763348889fb8f813a2e14a926542e975fd1f1c0417443036987d6f71718d24489fe010eaccf479c048ddff2bdd1514992f69c0adac0e945d5b71161aded624642d0f0bcfb419d678a328cf87a493d7b7eb264748ca000ce576a64a067e7c4dfd5af2f8ac60bcd44fd2d3cc33b986d9fe8b5e3c3099eba2b9b7327515e3deec4c11ebcb13d20d7c8b5c8d00c175205f9c9cc37d2712ac04395029c4ffb4b2a666268649d153c54c9a91e43b8dae2a60f231aab34ed98cab5ce3e6eb2dc8473b023ef66a29342b3ac2467904f2f033e52bf501a9b3956444e0073f0b57a65eb875315dca4d9cc4d60ab61412672e0e16d5426c737cdd526457d710ff93d1d00e34c7cb4e60e73efd16d732bbc066332a7e95f75c7c4c94db8ef4f1f997428c253f1c353f6bbe943cadcaaa001f069ead0c2be88aa57fb9ead34f70ff436fc2b4fbd7815ba01a530843569f0474d2d0b02c4574e37dd41e71a9826335e906a86362c7b321482721bcd39d4849c76d7bf510350c73d9ee20c8de7be6d8999e25ec0fd40b787985d77fc01de2aa488f664363e48a2235517877abd198b7a81fa24616c4661710e0af960c635330ab3eead900d4c9a59722acf6951d6c9fcb90e41692103f00b31938003f0333ce3fd9afd1b022834bc74a8365610cb19080b655ebd433009135e4e748920f402d4c22161cab2a0e17a1d8925a463fc699b892747a89569a2a9ad86a86b68ce4ad26858e5adce9597f4410ef81eb69574189f37528ae1f247de518c2da679aeecebc86c43a5670f689476724257a5b0b0079268a615cc1d9dedbe5b721a1e191e80cab020e3738cbba97f61bb311280e81cc5cf63db23642fda97a9f58ff69d1234bf62845e577abb1a3b0fcffdf30f6cba1f42f0e592540efd5944527e48d9e3ffffa4536d015104821c73c859ded944b9c5e6ebf9f81bc49407c5e6ff640a9fc8fe68bf5313fcd4c43dc6ba23f26dafa35d57eb39cdbf7c3663a2c6692990518f41e0fec9c1c90697a8e53561026e1448008ce1f6895ade5233f6d5b3d6b543b9da66185cba20200f168e0f2a01b2d92489728615d958a5a3c067fb3cd16129183cca70a936787587db0f18e7324f9ca63c8bd9366970a017d41caf987dff4fce90353561677e3b35c00b316e384dd5e561fed9320d299d90780d4f03954aa29e95c281a5d89a65f758593cab422d893d05ec1827b09ec2e175dcea1e8ba7782337dd3d5133c4c5d9f6d9abdf530ef6f49dcfbe8b168fda42e2e589ee180343c335f3e90b3db7677c2ba46bfe35a6ec01c974e773a352ed6f55831cb163979bba1159cdae4a00c8bc9412cdc31493f2614816dee6d2fb141da77ec24c6f475e7b35cee55510957809453c1cbfbe8b7e64ba25d69c8c28b128d3b74492ab25b722b5ee5b867a0f4df7ca80975c3150e63ae1ee60a6dc221aa510b0cd55e92764a6fcc15c50123788c695733dd2bd2c3ac76edc0e3cfc5574f52e19ec0d3b962ca91620529cc5a254d5afc37ac5ffe15462a359989351f5b9b436ad101b84cf275824bda1e792a231941e08affb7a4cfe28eab6aa79a13057afe21726348c7cc5d509a81da2aa9f34ee7f6466134652f803b6d4dab86c0877be08c92252b5815b5b8d1adab42e7877ec849a6424a4a68e6c1d3fd3bc5a2530575e51bc549f969a64b9d840ff5f80491def30cde7272c6cf8c6ac38bc44de646a826f8728e48a7d1bc2e7cda37bb3c554b80e0c092a271b98ca0165494c6bdf5b7bfbb55eba2621189f24d7670d951faa97fb06440654e654cd8f89529933f41d03b756f7407753f4894a10d3b07a4ae85fe35946945d5b0afd7f1192d7365c8b85481b84f5fe51bd4a993a5f2dd3d724fc727841bba4b00402f7233c07119a19ed0fda2d07c56bd74fa4137e0deb72d54f8a2bd23faa5bf1428708511a31a7e99a09ebb22f4e4b62dca8611b79e4d6ee99a18bf02ed2db78fd337953b8f8f4c7ad85be6e24d88d80056120da46e4f42aa3d509161316d50ab2ea09594b8f607d24c07c28b9a8ca0488ec7356de9b505be47562b96b5d1a7cae40a2c943d48795f96fd33d3cca41ee07bccf189b0bd01abf64d79016939d38fd12ede5a2fe16a81a2b13a32f45a3db7b2573c6525eda22084b7626295272ecdfd5cba3913c01699be277ff73dd3ecd8d7751459d66c8b71dea92ceaecbacb548097cf0ce517e0d19769ea6172d757f4a1d8b656564c8e6be6fdc57bbe2648f7df606416d8935c8fcf04188e1b14f2c1245decdfa50c9ed6e87fc72ecba0082b508a58fed5a93341aa05ef8242191e692d1d9b9a86df16b3030d4bef7eeed3e5d72980154a60172b5915533de029ba9b07ffe5e5fad832b982e3f103ec0ca2409a43692e48649add4a5129ba029097a69f698c4926e7653a63361dfccbea8b66774fe27cc9e1201910fd954e9a6f41957663a369152adb820b33e59bd9bd75de8d6ecd3d737a2ca599d05ea5c42e3df03cafa34993ec1301d9928b9a2c9b833d7379cc5b79e67b05102c9ed504662069517f0804482f3a44b4f705f9a1431737b4608b750cf6aa8d776a5bd81065714bedc1fc8659053101eb82e5f88e208857bd5f1fe5f7652829c41d0fdb7978ad2ea6c1cb8a0c70da827147d21d3c6b68eb3594e05e378eded6bb0be3fde15c3ef1d11596e80a275e2ec0378d83d42ac3e8164a7aa5dd53afd9b5caa91de35e846840c70d650ab4059ec0fb104cef91dc000135846bf0c4b1b584895a92f867c675ad4cb91b4a807717301629d402123d2a2e0eda2206e9d099a7432a2fc2d01829d7b3969e265cb0ac85ef5beb529598ef9e8e66ac6d22840bf10ba07b58229c177c5766d2e26b55bc9faf539303ce3d25bbc24c4a22c2ef57718f8756801e5cdbf62036af2744434d0b8fa76a63439cec772dba13ffe6820a316b51cddd0aa414c7aa32f550ed8fbea5d845530350ccfefb4d0c08c130c0ff38bd33b19af0f75f6b7636fc09797d90b376768358b3a5ba1e91054341ef44de63055ea3b44a700b87b47f86a30fac3cadb1f50720e9b9425ae5017742cf1758409747a1cd5b5c1043b957beded926770e442c1753162b7bac728ec971135ea4f673467e144737812f750903558d4831f11d029909531f1f554433890bc2a211c566f9461d2cf19a0b9693a1f8ff2c10e9f1d7657143953171a0bdf989798f09dfcdb51346fbd4daa3e6ed3b68c70468ad901e91c57a915bdfc3e7b34546a146338d76a455e2d48d26a95d061c1a66cfe6eee7d702411f4ec7838cbd7e5ac5bc4591e23e27c8c5ab4e33c65af8d80eb899c51782c558d49c8ebb1e406984562029b33479e848b56effadb03b50ab49526d718ca05fa94a4c44705ab52f3cbaed5bcd1b0bf37768730b7faf7cebda9a13e9fd13a6e95ee6d9d5d0bad9be0ddf9350ddee28ee7ec6e22fcb741544f14d36902171968a6020a2206718dcf47cd5cd19f67205af519b58166becac86b4dcdef4946d8535255d16833a15ccf3cbec48f1ba790b8180cc2495466e1a072ccb5956f27596122577eaeab985a6500ec4cb76e531599dd1f61b4bdd396</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1496,7 +1405,7 @@ GRANT ALL ON petShop.* TO `epet`@`localhost` IDENTIFIED BY &#39;0000&#39;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             

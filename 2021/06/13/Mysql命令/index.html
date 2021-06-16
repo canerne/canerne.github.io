@@ -583,14 +583,14 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    693
+                    6
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -610,116 +610,18 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="MySQL命令"><a href="#MySQL命令" class="headerlink" title="MySQL命令"></a>MySQL命令</h2><p>[TOC]</p>
-<p>[^小伟]: </p>
-<h5 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h5><pre><code>net stop mysql //停止服务
-</code></pre>
-<h5 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h5><pre><code>net start mysql //启动服务
-</code></pre>
-<h5 id="连接命令"><a href="#连接命令" class="headerlink" title="连接命令"></a>连接命令</h5><pre><code>mysql -h服务器主机地址 -u用户名 -p密码
-mysql -u root -p root
-mysql -u root -p
-exit 退出
-</code></pre>
-<h5 id="查询版本"><a href="#查询版本" class="headerlink" title="查询版本"></a>查询版本</h5><pre><code>select version(),user();
-</code></pre>
-<h5 id="数据库语句"><a href="#数据库语句" class="headerlink" title="数据库语句"></a>数据库语句</h5><pre><code>create database myschool;
-创建     数据库    名称
-show databases //显示数据库
-use myschool;//选择数据库
-drop database myschool;//删除数据库
-</code></pre>
-<h5 id="数据库提示语句"><a href="#数据库提示语句" class="headerlink" title="数据库提示语句"></a>数据库提示语句</h5><pre><code class="mysql">Qyery OK ：SQL语句执行成功
-1 row affected ：操作影响的行数
-0.012sec ：操作执行时间
-Unknown database &#39;mybase&#39;：数据库不存在
-Database changed : 选择数据库成功
-</code></pre>
-<h5 id="数据库工具"><a href="#数据库工具" class="headerlink" title="数据库工具"></a>数据库工具</h5><pre><code>SQLyog-图形化的MySQL管理工具
-</code></pre>
-<h5 id="关系图"><a href="#关系图" class="headerlink" title="关系图"></a>关系图</h5><table>
-<thead>
-<tr>
-<th><strong>符号</strong></th>
-<th><strong>含义</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518113711214.png" alt="image-20200518113711214"></td>
-<td><strong>实体，一般是名词</strong></td>
-</tr>
-<tr>
-<td><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518113723540.png" alt="image-20200518113723540"></td>
-<td><strong>属性，一般是名词</strong></td>
-</tr>
-<tr>
-<td><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518113737563.png" alt="image-20200518113737563"></td>
-<td><strong>关系，一般是动词</strong></td>
-</tr>
-</tbody></table>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200518113757897.png" alt="image-20200518113757897"></p>
-<h5 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h5><pre><code class="mysql">ZEROFILL # 自补充 限制输入负数 补位 约束 数值只能为正数
-unsigned # 标识 无符号 不能为负数
-PRIMARY KEY # 设置 为 主键
-AUTO_INCREMENT # 自增加一
-DEFAULT # 默认约束
-COMMENT # 注释声明
-EXISTS # 存在
-constraint # 主键
-references # 外键
-</code></pre>
-<h5 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h5><pre><code class="mysql">#查询
-#limit 参数1(int) 取前几条
-SELECT studentName,phone,address FROM student
-ORDER BY studentNo DESC
-LIMIT 4
-#limit 参数1(int),参数2(int) 截取位置(开始位置,结束位置)
-SELECT gradeId,studentName,phone,address,bornDate,email,pwd,sex FROM student
-ORDER BY studentNo DESC
-LIMIT 2,2 #截取到跳过 2个后的2个
-asc 升序
-desc 降序
-/*聚合函数*/
-# concat 字符串拼接
-SELECT CONCAT(&#39;My&#39;,&#39;S&#39;,&#39;QL&#39;)
-# insert 替换字符串(参数1，参数2，参数3,参数4)(原字符串,从第几位开始,替换个数,替换对象(新字符串))
-SELECT INSERT(&#39;这是SqL Server数据库&#39;,3,10,&#39;MySql&#39;)
-# 转大写
-SELECT LOWER(&#39;ABC&#39;)
-# 转小写
-SELECT UPPER(&#39;abc&#39;)
-# substring 截取(参数1,参数2,参数3)(原字符串,开始下标,开始下标后的多少位)
-SELECT SUBSTRING(&#39;JavaMySQLOracle&#39;,5,5)
-SELECT SUBSTRING(&#39;asdasd&#39;,3)
-# ----时间日期函数-----
-# curDate 获取当前时间 (年月日)
-SELECT CURDATE()
-# CURTIME 获取当前时间 (时分秒)
-SELECT CURTIME()
-# now 获取当前时间 年月日 时分秒
-SELECT NOW()
-# week(date) date参数是时间格式 获取一年中的第几周
-SELECT WEEK(&#39;2020-1-17&#39;)+1
-# 获取年 月 日 时 分 秒
-SELECT YEAR(NOW()) # 年
-SELECT MONTH(NOW()) # 月
-SELECT DAY(NOW()) # 日
-SELECT HOUR(NOW()) # 时
-SELECT MINUTE(NOW()) # 分
-SELECT SECOND(NOW()) # 秒
-# DATEDIFF 求天数差 (参数1,参数2)
-SELECT DATEDIFF(NOW(),&#39;2008-01-1&#39;)
-# ADDDDATE (参数1,参数2) 参数1 基础时间 参数2 添加天数
-SELECT ADDDATE(NOW(),30)
-# CEIL 向上取整 (返回大于或者等于自己的整数)
-SELECT CEIL(8.1)
-# floor 向下取整 (返回小于或者等于自己的整数)
-SELECT FLOOR(9.9)
-# rand 返回 0 - 1之间的随机数
-SELECT RAND()
-truncate # 重置自增
-</code></pre>
-
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5ce85a08525e48f663381df7e8f05ee2474dd3dcf01e9d1b9f72b134ca7afeb3">96f64bfa65c8b3728aebb0bdd2a2b4eed9657e65438224e7ff86e27ab41b4e22c68fb29c49a63451a0fd7cf00dd7a8b4d1c68c282b23244f4fd24def3015e3ae312c5beb4a84e7d0ace67bd43f3f49f44ce4935f3bec74668ea4c7013becb5fc4767ec2f332eb4684728312db6ac2aa0498b70247f3121f1daa8911be77d705c53bbb6b54847f40b36da8ef3328b762302095f61acfff57ed8beaaadbab96f5465d7467f8ad4815e0716ea74f77c239f5d7e961aec9820d697124e7885e4b41a84a871ead663c6ff474157fbce3482f8e52590c52cbabf04b47fa1bf4d4de38752ce824ed028b5b2c607ab8593a4ee2f744bc7117fa9448b5762698db069b0d3a75efe1f3a8828f9047ba5f94516fc4e3abc253bc8c8f56e56a6a5ceb54592db9a367c4e6073628d987ce3bc6855c8b6d7a9bdfec9c396e6a9e127929fd7ed9e87c3e95a1172311865cd4150bb56ee51fc77074e26e29be6f180fb91f768c16877a9b812524fb296b3b9c775403a2df429c9fd1b97cb8e810351981fca8e50839849a79677252579fd0f971d45370c00dcc04c9372dda2d3c58e98b236ebf193e5eb23267f0b0c3d9ec9a745c32bc171840824fbf9182fcd30f6bd34a5a809123293b8a016e723507b90f315dee67c08f9bcc59766bacead3a66f4ae7a1fa3357917253a3c24d23495f535453ef32ccececfdb7895079caa86174a4f0e0aa6b3c93529fdfcb8749d7dcce202616ebf90c2a06f62043d603af197b4feaa1f717dada466073291bc3eb8f35804da4f172463dd1781278d2aa2d00744790a1563f3c91d6516c9f897fa20f8220da72b992fea3de805657920f9dfd83a4656b58e3684f19443101a1ab3533917baab75361a79a07265b19f515e5bedaf39f34184ae696299314c561a3bd58344b629077a2d4717ec93dce7003fc58d67e420fa5155981900d8dad3e5bb384b0ccafd22ba8e8dd42ce6f872b582c8bbdf10bc84e21becdf7b0cd36e8593d0729cab0fba8ab96d7dd967e5a415c03a6d6dbef40fe4b178d304a48662a8f05254a5ffcb70348b5edc0e45fc287adefe87d4cee637c2ad9edec911c84ae79dc67bc281f543aa311ffc40434381bbe9b1919bb8e59531464dbcab497aad7923675cfe2731dcd11c4fb6eda059174130da29415c2c5ac8c456a63c911b018f8255e358a9a829364b10b091a2e85ca275546b1974d74397798ee2784ad571d75ec1c5b428d05d340162e9542f90f2356c43fe049c126cad109ee6af6627095ef4f23ce858fef3731dcf41eef7c34146d16461ef6518d6e552d522ead028e4f6da306a511811d9b250c80641aaa2bf4eb05d8f1c8be3dc22695d97e9cd93e1729c04e7b66ce7d764b69667d804468ecb3ecbeb7b7b6515169e5724a9880cdd3cdc1afa1f77e0e2a2b5c737e97f93dc6b437d4452fab113b6d2682b1bcabc73de93eee5369e08da2d19277692f186c92fad70eca09bb93db83ae1e68fe76dedbdf2e8af63284383b25f81bf4ef09f2d8a193481186d34afd9151cff16e0134fef02083653728ca114d1b2bc8fc548b4b0ff08ee8237d2a6726ae26d285f06a126caf0a4136276859bf69dd97e2d272f3d9219e69d83b01f52a9168050ccb8b49418c9f7b65359c6bdaf72d2c099f710fa0dd4f50e3319d39375e9253b72bf3a10f8b0b6eac753902bf372dd542f35e9d8c56888a8b8c76742622938660013f5f723d9734b867026f66ddabc8762f6f23f246a7f850d29490ba17fb6dc1e8892f0cfeecc494f172e661973d561b21bdce66eca5215da76732ea3161586179831b4e5faacd006b0ab84aa22fb700a261e0c3e4a352c4d0c8b4975fcda72c7891ad43bf99265bb04b557b54e723db3af5f5143323500c2e43904899fb0819f368ad21fcf1fd8a8923f53bf420722810f558756db2b29116c902ac762c47da91b05e893bfbd55497c36c6d719057f2c1c6b806b53442032e62b6bcdfe18c9626da136af8457c588be85a78fa9b0da984a44e34c894be84b002207bc13a46418ccd8ab91f9295bf16fdd37ddd0969ac08711306f7e0139bbf5da8a0dfc79180693ba756e3078b382e72a2fc59701d3c88ef536ebd349a903b11b8d99caa11f000d8a631cd5bd97332cd09c8ae95947c127d8a3260fca3401e7eac83af43eec35cdb71ac58f917197eef7014dec79cfa61cab249fceb494a1948fc6735a26b3feca9aa0f5033c41df47ae44bc36281881a593974ada8beadc900c864647c39392d27fce0a24fbb7612771c9fe1bd0f1fdd999c398998d22133d477183edd5f3a6218f4d70a24f15f8c655cb0c2ea0ae1482499ecb9e6817d40825afd336a4d97ca6ee222a1ca51e90d64e63fb4085209b66138c19ee3fd865212f6d582182607fdb79c6faf9ca9d9b16e659a538a2dfd9938f10f54d365cb4a9ac37708ec99af74a519f424547f8e7fcbfd35f16b78c0e807c3596352ec25a9638b95641d599f3f7c320415c050fc553cee09d9c8c76fb8b806cdf069b9a875379934db13d39c7091192ac5a1c2b7735bba35ef7924f40bfc258118f1d4cc21ca6d581b1bf982259b9bf8cdc6ee565872e1a104ed3aed19fc12c2c7bf53981680efe5c7efe8d0f16021ffb32d16d7a144701b9125ea98287593bdbca63118aa50076f191268af5717e23f0726fafccd569f8e91d3182bd95a4112a130e6bcae1215b4c0c11827acd45746309118cc98a8424c65ee72b4eeec7214eec4ce13dd654fcb7444fbe1c0d612eae150aae1a69adc6778f1f951ddbd32e40155881bb73e8797c1770aa0c10cf420df728a8a32c317562728dbebf6650d4c6fefd56e159d58f832ac6311e540483b5e999b9bf06a0b78958d6f4ad816ce13088fae38a983203e5f15115286ef5675238a03f9366d03890a529cb1aabf238731a61c045568953c0d3f99dc62c582532fbaafa25e2b5099a064df61920d36fe2fd7dde5b603d74ecac0bbf736bb41271b50d65957e12cfe662c4a24f939f6d810a16e1585f830a3f6dceadffe5c55ab853199378bc3cd429d3411483c905c67a1bd67f5383e70aa2d986a637aa2b24cee5444735ac2ff5ef19828f8e8bd20d1a927ccc0fd371840c8562920bcc70616d84d1ac3abfeaa6ea78e315236b6e247243fab28e0e5eb038b11f1e0c28c4bc1399711f6d7693078b1c09f04e0e2adc220cb0b4d73eb29c2df2bd5d38714b54f79d080a458cdfc0722a18731dfff778b7ed21d87c8d95a77200aeb5ee3692efb373858a679ef3734597972030d4b79b2c36c685f3ee3a298fff9088d6e8ca759d6b4645bb59e6d452893ad4da804bd5b4d7be5124121881a8bd6f0636bb72d2aa5943eaf19f2679b76079da27b1bd684efa704d686d9e0cbf71acb226a5b064851dfc6ce2a635edd5714a7cd119dc9eab92cefc68d06e8ddc43fd085bf4f7e1cd7a155a1ebdbb95603197cb324644df70b906faaf10ef085ca98a5fb06282a00b953e75d3a2e038ccb0078bf17484436283ce5fea1374fe6bec9d255a7a246b9807bdaae3ef2bfb39a49752e58b011ce7ac536d4da07765c1e1b793afe6274850cfd283f10f023444683899d3c75a7126f30a185eb2576f93dfeb1b4d9262a023e4f9993451d1ef068e20a203f9c0f91f7b41aa0469c8f4ba73327d17b9674dcc9c469a6c3abc8db4258a171df817dba17f2e4707f3f4ffe123d93e373d68481a6cd74a7d4adcdb31009508624cbd46ca8b8bbdfaf9362fa57d91a06d39c55f7681754e669d2e827c8c5d53fb117d713383e9d6c1287eb26214785f879b80f7bed38ddb293123ae087377797273281b9f21c1ce709c25887835e4613be046c800b222138804ff1da157b885860cb960a5fbf0d003c2ea3ca984e9e972d6c76508fbc34a2fefe1a280d02a0834287c6701a0e0e8d4d833d7a991eb88b2210c02f85d5e9a4a3dd123232a7b5130c933dcb5382296ce249ad0fd96759cab4596d77bdfcdea5bae9ef1bb1a83c9fcf39085888f0d79440fd82782ff0c9d2732386a8990fa8420b08c5bde2afafd3c33130929e8f73382b6e6c08cdef2ca6836010012296286df2a44b0262c292ec3a4c1f645cfc5f040dc278fcf609f5b29ea72c0dd83ed4f2cde2a7036d35f5fc53ab4f19f46b9b7b34d57a421f1c1bc8f8ab7389b9edff7c51328099d7700bca375d67d4cb8ac947685690d5a305a1a0ec06b240977cf2d24cf8bb5e18bc24fb79527faba87f2b7769a82c6b9976d2ef4ff8cc620bc26f5f91eb21f8555d63d862e97eca01b605cbeff53b9de793545a85819e5fc5ccdc10ef7f84e54ce572a6764298300937b9f0f0e3f0e88ea22df89c8dd6b2763d61a07be00a9cde2f657ff78a392bf36ca9f908d34de61da18324ab45a6ec28f34840e5d17a1867d5a55363d8a46f13ef774eb6f6c37267b9ebc347622b8aab8949b6e29ddb65c4fc0ed72e83990be696a6e5cd4f2a88d3b5356e0679e9f333c257c2664cb0abfe9f5f3b82c9a309d67076107c2e03048b6e105cee3680534d682bde01b9fb7b2af59dc71ea542f4e9d84dc9cd0ba5dfac239920fac263014bd3b7dc205a3a469f6ac4d57012278aa7670d71944f0d21dadd9a47699520d87f3be27948f8c5995bbf3121ae28b9ff1892c00ef4c9a7a50c919b557ca4f72501e7ea5210fefe3fd28452229bdd1c0c418fe95de28b1c4fc7e5d22e68860f36445a394d2a1d015c7b1e598b5ed8670ff3d4227a3a41d9ff15f0e71e5010876faf273accfdb1a15c28c6d52cd2d2074fd089ba43b037e0d230541011dff3db9cb266959b4a903421f804dbdb6e137ab4358b1d5096f11a100ea855ed4675b96de40d68f730c1a25b3614264cb5fbaed679119588a9e378ff0688d7a320724f9bfc796f8f5952709183d4222836f1d056bb64f99a62bb449ad212d7a5d7d454d21501dbbab32b065192a9ef3f7f1dd8233adbb5c7fb62e063880c2aa642d0d65753f8466a00fc84d26d04432fe1bce0364e78b71db8854cb153024bda64ff86793dad84173bcfd9f25f010c42462d9c829ebc6bff4739761bbc177f645b5d4f20ddd228a320a81dec9241c57be30ff8f0bb5b790eed27515ed4bbd8ff0c2c4313926845e4309ec5d8b5308da04e19ac67e6613194bd7f5499da2225fefa4b73713e2c74ca8fd430c5af631353c4dbf360b5faba8fa8fe56f4971b7a25668a08b25d79227902c80c27eca812a1f267f0f670ac1d8d473c89d45062bbd4796dde80305c710ed89f1cd7f3b768169a31a2185e6332d97c1dff7dc79bb6bd95f10d79463352b6df07b2ec73d8137e36ef44ed879cefacf0f63a6851efa26fe6514ddecd23ce0aa9f932b27ea764ff0ce398bc18323176f877075eca2042f5a15dc26d822cd54085cae0afa8f4fcc6e92c7ec0b4be1b629dbc877eab8eae2ec3fadff69b2461113b48a2c32ae841e77adf3053a12542c5a724a1ac4a4405468938e08a4a1972f9fabd356efb2e99ab1db7da20569fc924ba66d330087ad6599d372e14e799ee6b448ce470fcf36a59236b9b2434dba7efac18a6ea5ab6e39fdb303f5b74256dcb8498e88e79044df3a7fdfda59921552f3ace3e177838239ee4d627ed9bf4beee1a295521f82fa3de44886eac0133b0bf6a0965376d7e84f412124e4fd229a2cd128f6851ee556c0a5b3bc5b2d6de28e740511984d5736096166181353950925bab0997a55ee113d4b72acaa8357bb7c0e07a271d7a9c2ac6d8c13802cc398b3ac5d05941303c4efdecf66e138ea6eb137a8a9eaadfb6ea6da25cf7337eb2d0644e397eabfe2c1bc9b53f5164e78d99108fd2db5c4180ed247f13c514c936380ce9000102bf8187a53653f34fc0eb6197e29034ddb897f8203e0ada9961cf5e41cfa07a39899bf311324751c7794beab1a49830e9c2d10476c311337575a60a0961737dd8457926caef6f98b6407b9f48456321c431060094cf63799a9d50606d6124b1dd08cd003ad1e0c53101319243b33c078d9897d87516ed30de17796c4ea82f0642120d7c8bd63dab3c23833dc24b8dc86c8236956504e73193e80956e2f91368295ab3eb8778b625c6a7e1ffc49005247be034ce2a8fc38e3fe2ad0525dda95c545eb876f00e69a132532a916fff87c5108371e9dd393e194621992c648023b5823878476aed2e05fc5cec20ab9728c1b5de359a64a59a44d7c97e76df0ebb55b9b3fc59f5065d577ede6e1b6ab327620e7b716f2470eed5bfa20e97604c195cff220a68ec54e8d8346a1f7fc84608d278e4e5a274468c6c6bb3cde9333d85b5687a0a48da16c76329e550999134bf5067237026bfd984608a77854ef8d72c427fd53dffa9444194137bd1117a30c7aac04a277a7d35400cfb9a5e9af68c94258cbde3a7b9c6a18de326ddd5db98316e0ebbcfd07de2c8aade087040453a4a24b1dd2c9d2a8b6235d2b500821b2b74889503a643467d742acd202eb5a2a0ee733de030d6974cb00804534f482614ba5de9df26d4a390a3c16a5debcaff7275325a2a488c868bdd2956eec133c4350437717da964b2c517f74bac5e077a2fc98e727e8f5b23aea3204ba4c2d83b7f61a33d9ed479c46faeed78c6e917f317b3d6b82d20075b796679ca276eacb609794fc73f660de507969b94748b881f794af0bfb612876026ee03c66cc577b13408301031bc9dc29035c8e4a4a21a5df7b05fe4460ef4881c569703934436cd86ee277c4a31fb027839e97a0d470474724b70984b8c0c58e6f10aa16473283fdc9423d379f55eebb609b41ebed74dabf87fd01a6eb30ea7cbdb9f5faefe836b20e74a2b8e8943079688918996fe3b7053b662d1e4c17ed7afe1417822a3240fcc7009d2dac1a47066c39a3877980237aef81249a2c4a9917f4ed93b38f45fc0d17ff5a9ae446f31ac669f4df00a43d657e3b68786f635708627ae444a88dcdc497eab099ea335c6ba220702becd1fd3b8f8832043264d0aa40225d73555c88345a8dd0f269c551ff8f0b71827cf52342573f86c3ece5026dcf2bf5931f25598ff68d1044b3182658f6fba57e45a5100a4ad3325e798665bad1479ceeb94e1ca54bef12c2f5125b06e10820f7ea9f712c1ed06dee162a6669f7851d8b7cbc7c13580132683584d6e72e523903ce16e288a57d8a94dc8bb57c00d2e16d787e36737745615f606196d89da4230c15fbce5296528c5715fd261174673539e95ccc655636b248689111b68c87d702d2e08f96786accaf</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
                 
             </div>
             <hr/>
@@ -1503,7 +1405,7 @@ truncate # 重置自增
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">9.7k</span>
+                        class="white-color">146</span>
             
             
             
