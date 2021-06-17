@@ -615,7 +615,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    14
+                    6
                 </div>
                 
 
@@ -642,13 +642,13 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+                <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <script id="hbeData" type="hbeData" data-hmacdigest="c84311888b7af602be100431015bdc15902115cc39c79926675d152e721ec709">98c5eac1e431cec725e9b50c1f9552a76b9487145ad7988e999aa3d2636919a1d809cb8c36ebfcbbf2b44f7d2a5a1943edbf2d9ed9b7bfa98a3e4217890b6ff6b999677aef5e148561844878227e855832613f324d21a49fe27a5d3f048e5f0f5b624f3209a5adf89b65905619c5c02d005f8542a3786cdc3dbbef6eb8060a7ab7d418db8190d565f9feb4671da125fd21e5dd693a00c9cbddf884d5dddf9c64</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码才能查看哦.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
       </label>
     </div>
   </div>
@@ -1261,6 +1261,43 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 </div>
 
 
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('250')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 璨儿のBlog<br />'
+            + '文章作者: caner<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
 
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
@@ -1276,8 +1313,6 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
 
 
 <!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
@@ -1448,7 +1483,7 @@ setTimeout(function(){ loader.style.display="none"; },2500); },1000);//强制显
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">138</span>
+                        class="white-color">130</span>
             
             
             
@@ -1725,8 +1760,8 @@ $(function () {
     
     
     <script type="text/javascript" color="0,0,255"
-        pointColor="0,0,255" opacity='0.7'
-        zIndex="-1" count="99"
+        pointColor="0,0,255" opacity='0.8'
+        zIndex="-1" count="130"
         src="/libs/background/canvas-nest.js"></script>
     
 
