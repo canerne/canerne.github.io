@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>note标签</title>
+      <link href="/2021/06/18/note%E6%A0%87%E7%AD%BE/"/>
+      <url>/2021/06/18/note%E6%A0%87%E7%AD%BE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="note标签测试"><a href="#note标签测试" class="headerlink" title="note标签测试"></a>note标签测试</h1><div class="note info">这里是 info 标签样式</div><div class="note info no-icon">这里是不带符号的 info 标签样式</div><div class="note primary">这里是 primary 标签样式</div><div class="note primary no-icon">这里是不带符号的 primary 标签样式</div><div class="note warning">这里是 warning 标签样式</div><div class="note warning no-icon">这里是不带符号的 warning 标签样式</div><div class="note danger">这里是 danger 标签样式</div><div class="note danger no-icon">这里是不带符号的 danger 标签样式</div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> note标签 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试encrypt</title>
       <link href="/2021/06/15/%E6%B5%8B%E8%AF%95encrypt/"/>
       <url>/2021/06/15/%E6%B5%8B%E8%AF%95encrypt/</url>
