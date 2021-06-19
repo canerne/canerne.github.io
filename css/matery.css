@@ -36,6 +36,8 @@
 body {
     background-color: #eaeaea;
     margin: 0;
+    background: linear-gradient(60deg, rgba(224,255,125, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover;
+    background-attachment: fixed;
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
@@ -242,6 +244,7 @@ mark {
 }
 
 .bg-color {
+    /* 导航栏 */
     background-image: linear-gradient(to right, #FF1493 0%, #1E90FF 100%);
     /* linear-gradient(to right, #f72da9 0%, rgb(226, 36, 179) 100%); */
     /* to right, #7371BC 0%, #284D95 100% */
